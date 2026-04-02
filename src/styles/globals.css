@@ -28,7 +28,6 @@
     color: #0a0a0a;
   }
 
-  /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
@@ -38,7 +37,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #333;
+    background: #2a3a00;
     border-radius: 3px;
   }
 
@@ -67,6 +66,68 @@
   .stagger-3 { animation-delay: 0.3s; }
   .stagger-4 { animation-delay: 0.4s; }
   .stagger-5 { animation-delay: 0.5s; }
+
+  /* Gradient mesh background for hero */
+  .gradient-mesh {
+    background:
+      radial-gradient(ellipse 80% 60% at 10% 90%, rgba(191, 255, 0, 0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 20%, rgba(0, 255, 178, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
+      #0a0a0a;
+  }
+
+  /* Subtle section backgrounds */
+  .section-elevated {
+    background: linear-gradient(180deg, #111111 0%, #0a0a0a 100%);
+  }
+
+  .section-warm {
+    background: linear-gradient(180deg, #0d0f08 0%, #0a0a0a 100%);
+  }
+
+  .section-glow {
+    position: relative;
+  }
+
+  .section-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #BFFF00, #00FFB2, transparent);
+    opacity: 0.3;
+  }
+
+  /* Glow dot decoration */
+  .glow-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #BFFF00;
+    box-shadow: 0 0 12px rgba(191, 255, 0, 0.5), 0 0 40px rgba(191, 255, 0, 0.2);
+  }
+
+  /* Accent gradient text */
+  .text-gradient {
+    background: linear-gradient(135deg, #BFFF00 0%, #00FFB2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Card with border glow */
+  .card-glow {
+    background: #161616;
+    border: 1px solid #1a1a1a;
+    transition: border-color 0.5s, box-shadow 0.5s;
+  }
+
+  .card-glow:hover {
+    border-color: rgba(191, 255, 0, 0.2);
+    box-shadow: 0 0 30px rgba(191, 255, 0, 0.05), inset 0 1px 0 rgba(191, 255, 0, 0.1);
+  }
 }
 
 @keyframes reveal {
@@ -80,13 +141,17 @@
   51%, 100% { opacity: 0; }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
 .cursor-blink::after {
   content: '_';
   animation: blink 1s step-end infinite;
   color: #BFFF00;
 }
 
-/* Magnetic button hover area */
 .magnetic-btn {
   position: relative;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
