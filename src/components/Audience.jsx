@@ -3,19 +3,19 @@ import { useEffect, useRef } from 'react'
 const audiences = [
   {
     label: 'Small business owners',
-    text: "You're drowning in admin. There are 47 tabs open and half of them are the same form. You know there's a better way — you just don't have time to Google it.",
+    text: "You've got 47 browser tabs open and at least three of them are the same form. You've thought about automating things roughly a hundred times but you're too busy actually running the business to sit down and figure out where to start, which is sort of the whole problem.",
     accent: '#BFFF00',
     icon: '→',
   },
   {
     label: 'Tradies & service businesses',
-    text: "You're great at what you do. Quoting, invoicing, scheduling? Not so much. AI can handle the boring bits so you can get back to the actual work.",
+    text: "Brilliant at what you do, less thrilled about the quoting and invoicing and chasing and scheduling that surrounds what you do. There's a version of your week where all that stuff just... happens, and it's not as far off as you think.",
     accent: '#00FFB2',
     icon: '→',
   },
   {
     label: 'Agencies & small teams',
-    text: "You need AI integration but not a full-time hire. Someone who gets it, builds it, and gets out of the way.",
+    text: "You know AI could plug into what you're doing but you don't need a full-time person for it, you need someone who turns up, builds the thing properly, explains it in plain English, and then gets out of the way.",
     accent: '#10B981',
     icon: '→',
   },
@@ -61,7 +61,7 @@ export default function Audience() {
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-            Sound like you?
+            If any of this sounds<br />familiar, we should talk.
           </h2>
         </div>
 

@@ -66,7 +66,7 @@ export default function Hero() {
         <div ref={badgeRef} className="mb-6 flex items-center gap-3">
           <div className="glow-dot" />
           <span className="text-xs text-accent/80 tracking-widest uppercase">
-            AI Consulting for Humans
+            AI consulting, but for actual people
           </span>
         </div>
 
@@ -83,8 +83,8 @@ export default function Hero() {
           ref={subRef}
           className="text-lg md:text-xl text-muted-light max-w-xl leading-relaxed mb-12"
         >
-          No jargon. No robots. Just a sharp eye on your business
-          and the know-how to make AI actually useful.
+          Most businesses don't need a giant AI strategy — they need someone
+          to walk in, look at the mess, and quietly make half of it disappear.
         </p>
 
         <div ref={ctaRef} className="flex items-center gap-6">

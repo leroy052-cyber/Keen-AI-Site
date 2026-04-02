@@ -5,28 +5,28 @@ const services = [
     number: '01',
     title: 'We learn your business',
     description:
-      "Before we touch any tech, we sit down and figure out how things actually work. The bottlenecks, the workarounds, the stuff that eats your day.",
+      "This is the listening part. We sit with you, ask probably too many questions, and get genuinely curious about the weird way your business actually runs — because every business runs a bit weird, and that's where the good stuff hides.",
     color: '#BFFF00',
   },
   {
     number: '02',
-    title: 'We find the pain points',
+    title: "We find what's worth fixing",
     description:
-      "Not every problem needs AI. We identify the ones that do — and the ones that just need a better spreadsheet.",
+      "Not everything needs AI, and we'll tell you that to your face. Sometimes it's a spreadsheet, sometimes it's just a better process, and sometimes — yeah, sometimes it's a bit of automation that'll save you ten hours a week and make you wonder why you didn't do it sooner.",
     color: '#84CC16',
   },
   {
     number: '03',
-    title: 'We build the fix',
+    title: 'We build the thing',
     description:
-      "Custom workflows, automations, integrations. Built to fit your business, not the other way around. Nothing over-engineered.",
+      "Workflows, automations, integrations — whatever shape the fix takes. We build it to fit the way you already work, not the other way around, because nobody wants to restructure their whole operation around a tool they didn't ask for.",
     color: '#00FFB2',
   },
   {
     number: '04',
-    title: 'We teach you to run it',
+    title: 'We hand you the keys',
     description:
-      "No vendor lock-in, no mystery black boxes. You understand what we built, and you can run it without us. That's the whole point.",
+      "This is the part most consultants skip: we actually make sure you understand what we built, why it works, and how to run it without us hovering. If you never need to call us again, we've done our job properly.",
     color: '#10B981',
   },
 ]
@@ -71,8 +71,8 @@ export default function Services() {
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-            Simple process.<br />
-            <span className="text-gradient">Real results.</span>
+            Four steps, and one of them<br />
+            <span className="text-gradient">is just listening.</span>
           </h2>
         </div>
 

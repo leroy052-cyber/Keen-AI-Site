@@ -66,15 +66,15 @@ export default function About() {
           {/* Right column */}
           <div ref={contentRef} className="space-y-6">
             <p className="text-lg md:text-xl text-surface leading-relaxed">
-              Tradesperson turned AI consultant. I spent years building things with my hands before I started building things with code.
+              I used to be a tradesperson, which is a strange thing to lead with on an AI consulting website, but it's actually the most relevant thing about me.
             </p>
             <p className="text-muted-light leading-relaxed">
-              Turns out the mindset is the same: figure out what needs doing, find the right tool, and get it done without overcomplicating it. I started Keen AI because I kept seeing smart business owners wasting hours on stuff that a well-placed automation could handle in seconds.
+              Years of building things with my hands taught me something that carries over surprisingly well: you show up, you look at the problem, you figure out the right tool for the job, and you don't overcomplicate it. I started Keen AI because I kept meeting smart business owners burning hours on things that a well-placed bit of automation could handle before their morning coffee went cold — and nobody was helping them in a way that actually made sense.
             </p>
             <p className="text-muted-light leading-relaxed">
-              I make content as{' '}
+              I also make content as{' '}
               <span className="text-mint font-bold">Tech for Humans</span>{' '}
-              on TikTok — breaking down AI and tech without the jargon. Because if you can't explain it simply, you don't understand it well enough.
+              on TikTok, where I try to talk about AI and tech the way you'd explain it to a mate at the pub — because honestly, if you can't do that, you probably don't understand it as well as you think you do.
             </p>
 
             {/* Social links with coloured icons */}

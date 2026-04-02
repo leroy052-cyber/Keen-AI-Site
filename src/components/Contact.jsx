@@ -43,13 +43,13 @@ export default function Contact() {
         </div>
 
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95] mb-12">
-          Ready to get
+          Alright, let's
           <br />
-          <span className="text-gradient">keen?</span>
+          <span className="text-gradient">do this.</span>
         </h2>
 
         <p className="text-muted-light text-lg max-w-lg mb-16 leading-relaxed">
-          No pitch decks. No discovery calls that could've been an email. Just reach out and tell me what's eating your time.
+          Send me an email, tell me what's chewing up your time, and we'll have a proper conversation about whether AI is the right fix or if you just need someone to tell you your current system is fine and you should stop worrying about it.
         </p>
 
         {/* Contact link */}
