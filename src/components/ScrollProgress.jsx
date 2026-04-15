@@ -4,7 +4,7 @@ export default function ScrollProgress() {
   const progress = useScrollProgress()
 
   return (
-    <div className="fixed top-0 left-0 w-full h-[2px] z-[9999]">
+    <div className="fixed top-0 left-0 w-full h-[2px] z-[9999]" aria-hidden="true">
       <div
         className="h-full bg-accent origin-left"
         style={{

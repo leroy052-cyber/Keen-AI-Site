@@ -20,7 +20,19 @@
     background-color: #0a0a0a;
     color: #fafafa;
     overflow-x: hidden;
-    cursor: none;
+  }
+
+  /* Only hide cursor on devices with fine pointer (mouse) on md+ screens */
+  @media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+    body {
+      cursor: none;
+    }
+  }
+
+  /* Focus styles for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid #BFFF00;
+    outline-offset: 2px;
   }
 
   ::selection {
@@ -155,6 +167,16 @@
 .magnetic-btn {
   position: relative;
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Noise texture overlay */

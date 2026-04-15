@@ -64,7 +64,7 @@ export default function CustomCursor() {
   }, [])
 
   return (
-    <>
+    <div aria-hidden="true">
       {/* Dot */}
       <div
         ref={dotRef}
@@ -80,6 +80,6 @@ export default function CustomCursor() {
           transition: 'border-color 0.3s, opacity 0.3s, width 0.3s, height 0.3s',
         }}
       />
-    </>
+    </div>
   )
 }

@@ -87,12 +87,12 @@ export default function Audience() {
                 }}
               />
 
-              <span
+              <h3
                 className="text-xs tracking-widest uppercase block mb-4 font-bold"
                 style={{ color: audience.accent }}
               >
                 {audience.label}
-              </span>
+              </h3>
 
               <p className="text-muted-light leading-relaxed text-sm">
                 {audience.text}
