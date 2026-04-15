@@ -31,8 +31,7 @@ export default {
       },
       fontFamily: {
         mono: ['"JetBrains Mono"', 'monospace'],
-        sans: ['"JetBrains Mono"', 'monospace'],
-        display: ['"JetBrains Mono"', 'monospace'],
+        display: ['"TASA Orbiter"', 'sans-serif'],
       },
     },
   },
