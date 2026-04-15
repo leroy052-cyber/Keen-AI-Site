@@ -88,8 +88,17 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="flex items-center gap-3 font-bold text-lg tracking-tight">
             <svg className="w-7 h-7" viewBox="0 0 512 512">
+              <defs>
+                <linearGradient id="footKGrad" x1="0" y1="0" x2="0.5" y2="1">
+                  <stop offset="0%" stopColor="#BFFF00"/>
+                  <stop offset="100%" stopColor="#00FFB2"/>
+                </linearGradient>
+                <clipPath id="footKClip">
+                  <text x="50" y="430" fontFamily="'Space Mono', monospace" fontWeight="bold" fontSize="420">k</text>
+                </clipPath>
+              </defs>
               <path d="M0 0 H300 Q512 0 512 212 V512 H0 Z" fill="#0a0a0a"/>
-              <text x="50" y="430" fontFamily="'Space Mono', monospace" fontWeight="bold" fontSize="420" fill="#BFFF00">k</text>
+              <rect x="0" y="0" width="512" height="512" fill="url(#footKGrad)" clipPath="url(#footKClip)"/>
             </svg>
             KEEN<span className="text-accent">_</span>AI
           </div>
