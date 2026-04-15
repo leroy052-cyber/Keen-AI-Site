@@ -33,6 +33,12 @@ system is fine.
 - **Tradies & service businesses** who are great at what they do but drowning in quoting, invoicing, and scheduling
 - **Agencies & small teams** that know AI could help but don't need a full-time hire
 
+## Blog
+
+- [AI for Tradies: What Actually Works in 2026](https://keenai.com.au/blog/ai-for-tradies-australia): Practical guide to AI and automation for Australian tradies and service businesses — quoting, invoicing, scheduling.
+- [A Small Business Owner's Honest Guide to AI Automation](https://keenai.com.au/blog/small-business-ai-automation-australia): Where to start with AI automation, what it costs, and how to tell if you actually need it.
+- [Do You Actually Need an AI Consultant?](https://keenai.com.au/blog/do-you-need-ai-consultant): An honest framework for figuring out whether you need professional help or can sort it out yourself.
+
 ## Contact
 
 - Email: zak@keenai.com.au

@@ -34,6 +34,7 @@ jobs:
 
       - run: npm ci
       - run: npx vite build
+      - run: node scripts/prerender.mjs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
