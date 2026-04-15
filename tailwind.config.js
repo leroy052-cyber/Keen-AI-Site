@@ -30,8 +30,9 @@ export default {
         'border-accent': '#2a3a00',
       },
       fontFamily: {
-        sans: ['"TASA Orbiter"', 'sans-serif'],
-        display: ['"TASA Orbiter"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        sans: ['"JetBrains Mono"', 'monospace'],
+        display: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },

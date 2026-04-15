@@ -16,7 +16,7 @@ function Nav() {
       <Link
         to="/"
         className="font-bold text-xl tracking-tight"
-        style={{ fontFamily: "'TASA Orbiter', sans-serif" }}
+        style={{ fontFamily: "'JetBrains Mono', monospace" }}
       >
         <span className="text-gradient">K</span>EEN
         <span className="text-gradient">_</span>AI
@@ -50,7 +50,7 @@ function Footer() {
           <Link
             to="/"
             className="font-bold text-xl tracking-tight"
-            style={{ fontFamily: "'TASA Orbiter', sans-serif" }}
+            style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             <span className="text-gradient">K</span>EEN
             <span className="text-gradient">_</span>AI
