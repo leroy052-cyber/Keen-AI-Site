@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 876 220">
-  <rect width="876" height="220" fill="#0a0a0a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 792 220">
+  <rect width="792" height="220" fill="#0a0a0a"/>
   <defs>
     <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#BFFF00"/>
       <stop offset="100%" stop-color="#00FFB2"/>
     </linearGradient>
   </defs>
-  <path d="M242 474 238 437 260 465 500 736H688L384 406L689 0H505L278 314L242 278V0H95V736H242Z" transform="translate(30.0, 170) scale(0.1800, -0.1800)" fill="url(#grad)"/>
-  <path d="M95 736H597V596H240V439H556V299H240V140H611V0H95Z" transform="translate(156.7, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
-  <path d="M95 736H597V596H240V439H556V299H240V140H611V0H95Z" transform="translate(276.6, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
-  <path d="M754 -30 196 474 239 450 242 0H95V765H101L647 263L615 277L612 736H758V-30Z" transform="translate(396.5, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
-  <path d="M102 121H510V0H102Z" transform="translate(550.0, 170) scale(0.1800, -0.1800)" fill="url(#grad)"/>
-  <path d="M12 0 344 765H352L684 0H516L304 538L409 610L155 0ZM239 266H460L511 144H194Z" transform="translate(660.2, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
-  <path d="M95 736H240V0H95Z" transform="translate(785.5, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
+  <path d="M71 0V680H195V0ZM194 347 481 680H628L306 313L310 389L636 0H479Z" transform="translate(30.0, 170) scale(0.1800, -0.1800)" fill="url(#grad)"/>
+  <path d="M71 0V680H543V577H195V402H518V300H195V103H543V0Z" transform="translate(145.9, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
+  <path d="M71 0V680H543V577H195V402H518V300H195V103H543V0Z" transform="translate(252.5, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
+  <path d="M71 0V680H288L582 20H568L565 680H684V0H467L173 660H187L190 0Z" transform="translate(359.0, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
+  <path d="M0 -192V-83H520V-192Z" transform="translate(494.9, 170) scale(0.1800, -0.1800)" fill="url(#grad)"/>
+  <path d="M354 660 138 0H12L245 680H452L688 0H556L338 660ZM158 187V285H538V187H348Z" transform="translate(588.5, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
+  <path d="M71 0V680H195V0Z" transform="translate(714.5, 170) scale(0.1800, -0.1800)" fill="#fafafa"/>
 </svg>
