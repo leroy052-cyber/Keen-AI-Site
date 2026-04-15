@@ -46,7 +46,7 @@ export default function Hero() {
 
       {/* Top bar */}
       <div className="absolute top-0 left-0 right-0 flex justify-between items-center py-6 section-padding z-10">
-        <a href="#hero" className="font-bold text-lg tracking-tight">
+        <a href="#hero" className="font-bold text-xl tracking-tight" style={{ fontFamily: "'TASA Orbiter', sans-serif" }}>
           <span className="text-gradient">K</span>EEN<span className="text-gradient">_</span>AI
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-light">
