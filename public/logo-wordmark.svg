@@ -1,23 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 220">
   <rect width="830" height="220" fill="#0a0a0a"/>
   <defs>
-    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="grad" x1="0" y1="0" x2="0.3" y2="1">
       <stop offset="0%" stop-color="#BFFF00"/>
       <stop offset="100%" stop-color="#00FFB2"/>
     </linearGradient>
-    <!-- Clip to just the K character slot (char 1) -->
-    <clipPath id="kClip">
-      <rect x="30" y="0" width="110" height="220"/>
-    </clipPath>
-    <!-- Clip to just the underscore character slot (char 5) -->
-    <clipPath id="uClip">
-      <rect x="470" y="0" width="110" height="220"/>
-    </clipPath>
   </defs>
-  <!-- Base: full white text -->
-  <text x="30" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180" fill="#fafafa">KEEN_AI</text>
-  <!-- Gradient overlay on K slot -->
-  <text x="30" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180" fill="url(#grad)" clip-path="url(#kClip)">KEEN_AI</text>
-  <!-- Gradient overlay on underscore slot -->
-  <text x="30" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180" fill="url(#grad)" clip-path="url(#uClip)">KEEN_AI</text>
+  <text x="30" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180"><tspan fill="url(#grad)">K</tspan><tspan fill="#fafafa">EEN</tspan><tspan fill="url(#grad)">_</tspan><tspan fill="#fafafa">AI</tspan></text>
 </svg>
