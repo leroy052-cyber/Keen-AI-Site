@@ -1,6 +1,7 @@
 import Hero from './components/Hero'
 import StickyText from './components/StickyText'
 import Services from './components/Services'
+import SkillsServices from './components/SkillsServices'
 import Audience from './components/Audience'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -15,6 +16,7 @@ export default function App() {
       <Hero />
       <StickyText />
       <Services />
+      <SkillsServices />
       <Audience />
       <About />
       <Contact />

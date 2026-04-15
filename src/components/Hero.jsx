@@ -51,6 +51,7 @@ export default function Hero() {
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-light">
           <a href="#services" className="hover:text-accent transition-colors duration-300">Services</a>
+          <a href="#skills" className="hover:text-accent transition-colors duration-300">Skills</a>
           <a href="#about" className="hover:text-accent transition-colors duration-300">About</a>
           <a
             href="#contact"
