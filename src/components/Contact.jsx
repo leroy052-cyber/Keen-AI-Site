@@ -93,7 +93,7 @@ export default function Contact() {
           <div className="flex items-center gap-6">
             {[
               { name: 'TikTok', href: 'https://www.tiktok.com/@techforhumans', color: 'hover:text-mint' },
-              { name: 'LinkedIn', href: 'https://www.linkedin.com/in/zaklevy', color: 'hover:text-accent' },
+              { name: 'LinkedIn', href: 'https://www.linkedin.com/in/zak-levy-63560a200/', color: 'hover:text-accent' },
               { name: 'GitHub', href: 'https://github.com/leroy052-cyber', color: 'hover:text-emerald' },
             ].map((link) => (
               <a

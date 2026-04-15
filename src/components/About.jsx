@@ -91,7 +91,7 @@ export default function About() {
                 TikTok
               </a>
               <a
-                href="https://www.linkedin.com/in/zaklevy"
+                href="https://www.linkedin.com/in/zak-levy-63560a200/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 text-sm text-muted-light hover:text-accent transition-colors duration-300"
