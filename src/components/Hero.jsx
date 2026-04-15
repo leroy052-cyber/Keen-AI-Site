@@ -46,7 +46,11 @@ export default function Hero() {
 
       {/* Top bar */}
       <div className="absolute top-0 left-0 right-0 flex justify-between items-center py-6 section-padding z-10">
-        <div className="font-bold text-lg tracking-tight">
+        <div className="flex items-center gap-3 font-bold text-lg tracking-tight">
+          <svg className="w-7 h-7" viewBox="0 0 512 512">
+            <path d="M0 0 H300 Q512 0 512 212 V512 H0 Z" fill="#0a0a0a"/>
+            <text x="50" y="430" fontFamily="'Space Mono', monospace" fontWeight="bold" fontSize="420" fill="#BFFF00">k</text>
+          </svg>
           KEEN<span className="text-accent">_</span>AI
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-light">

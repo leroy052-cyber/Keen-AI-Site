@@ -86,7 +86,11 @@ export default function Contact() {
 
         {/* Footer */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div className="font-bold text-lg tracking-tight">
+          <div className="flex items-center gap-3 font-bold text-lg tracking-tight">
+            <svg className="w-7 h-7" viewBox="0 0 512 512">
+              <path d="M0 0 H300 Q512 0 512 212 V512 H0 Z" fill="#0a0a0a"/>
+              <text x="50" y="430" fontFamily="'Space Mono', monospace" fontWeight="bold" fontSize="420" fill="#BFFF00">k</text>
+            </svg>
             KEEN<span className="text-accent">_</span>AI
           </div>
 
