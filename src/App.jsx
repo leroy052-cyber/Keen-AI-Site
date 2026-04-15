@@ -13,10 +13,12 @@ export default function App() {
       <CustomCursor />
       <ScrollProgress />
       <Hero />
-      <StickyText />
-      <Services />
-      <Audience />
-      <About />
+      <main id="main-content">
+        <StickyText />
+        <Services />
+        <Audience />
+        <About />
+      </main>
       <Contact />
     </div>
   )

@@ -16,7 +16,7 @@
     <meta name="geo.region" content="AU" />
     <meta name="geo.placename" content="Australia" />
     <link rel="alternate" hreflang="en-AU" href="https://keenai.com.au/" />
-    <link rel="alternate" hreflang="en" href="https://keenai.com.au/" />
+    <link rel="alternate" hreflang="x-default" href="https://keenai.com.au/" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
@@ -55,22 +55,86 @@
     }
     </script>
 
-    <!-- JSON-LD Structured Data: LocalBusiness -->
+    <!-- JSON-LD Structured Data: ProfessionalService (LocalBusiness subtype) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "ProfessionalService",
       "name": "Keen AI",
       "url": "https://keenai.com.au",
       "logo": "https://keenai.com.au/logo-keen-ai.png",
       "description": "We find where AI fits. AI consulting and automation for small businesses, tradies, and agencies in Australia.",
       "email": "zak@keenai.com.au",
       "image": "https://keenai.com.au/logo-keen-ai.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Zak Levy"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AU"
+      },
       "areaServed": {
         "@type": "Country",
-        "name": "Australia"
+        "name": "Australia",
+        "sameAs": "https://www.wikidata.org/wiki/Q408"
       },
-      "serviceType": ["AI Consulting", "Business Automation", "AI Integration", "Workflow Automation"]
+      "serviceType": ["AI Consulting", "Business Automation", "AI Integration", "Workflow Automation"],
+      "sameAs": [
+        "https://www.tiktok.com/@techforhumans",
+        "https://www.linkedin.com/in/zak-levy-63560a200",
+        "https://github.com/leroy052-cyber"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does Keen AI do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keen AI is an Australian AI consulting firm that helps small businesses, tradies, and agencies find where AI and automation actually fit. We learn your business, identify what's worth fixing, build the solution, and hand you the keys."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Keen AI for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keen AI works with three types of clients: small business owners overwhelmed by admin and manual processes, tradies and service businesses drowning in quoting, invoicing, and scheduling, and agencies or small teams that know AI could help but don't need a full-time hire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Keen AI based in Australia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Keen AI (keenai.com.au) is an Australian AI consulting business founded by Zak Levy. We are a separate entity from Keen AI Ltd (keen-ai.com), a UK-based company focused on infrastructure and utilities AI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Keen AI's consulting process work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our process has four steps: (1) We learn your business by asking deep questions and understanding how it actually runs. (2) We find what's worth fixing — not everything needs AI. (3) We build the solution — workflows, automations, and integrations that fit your existing operations. (4) We hand you the keys and make sure you understand everything in plain English."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does every business need AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Sometimes the answer is a better spreadsheet, a simpler process, or just someone telling you your current system is fine. Keen AI gives honest assessments — we won't sell you AI if you don't need it."
+          }
+        }
+      ]
     }
     </script>
 
@@ -131,5 +195,14 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <noscript>
+      <div style="font-family: monospace; background: #0a0a0a; color: #fafafa; padding: 2rem; max-width: 600px; margin: 2rem auto;">
+        <h1 style="color: #BFFF00;">Keen AI — We find where AI fits.</h1>
+        <p>AI consulting and automation for small businesses, tradies, and agencies in Australia.</p>
+        <p>Most businesses don't need a giant AI strategy — they need someone to walk in, look at the mess, and quietly make half of it disappear.</p>
+        <p>Founded by Zak Levy. Based in Australia.</p>
+        <p>Get in touch: <a href="mailto:zak@keenai.com.au" style="color: #BFFF00;">zak@keenai.com.au</a></p>
+      </div>
+    </noscript>
   </body>
 </html>

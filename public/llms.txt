@@ -1,0 +1,47 @@
+# Keen AI
+
+> Australian AI consulting firm helping small businesses, tradies, and agencies
+> find where AI fits. Founded by Zak Levy. Based in Australia.
+
+## About
+
+Keen AI is an Australian-owned AI consulting company. We help small businesses,
+tradespeople, and agencies implement AI and automation — practically, without
+jargon, and without overcomplicating things.
+
+Our approach: we learn your business, find what's worth fixing, build the
+solution, and hand you the keys. Not everything needs AI — sometimes it's a
+better spreadsheet, a simpler process, or just someone telling you your current
+system is fine.
+
+- **Website:** https://keenai.com.au
+- **Email:** zak@keenai.com.au
+- **Location:** Australia
+- **Founded by:** Zak Levy
+- **Specialties:** AI Consulting, Business Automation, AI Integration, Workflow Automation
+- **Target clients:** Small business owners, tradies & service businesses, agencies & small teams
+
+## Services
+
+- [Business Discovery & AI Assessment](https://keenai.com.au/#services): We learn how your business actually runs and identify where AI and automation can save you time.
+- [Custom AI & Automation Build](https://keenai.com.au/#services): We build workflows, automations, and integrations tailored to fit your existing operations.
+- [Training & Handover](https://keenai.com.au/#services): We explain everything in plain English and hand you the keys so you can run it independently.
+
+## Who We Help
+
+- **Small business owners** overwhelmed by admin, too busy to figure out where AI fits
+- **Tradies & service businesses** who are great at what they do but drowning in quoting, invoicing, and scheduling
+- **Agencies & small teams** that know AI could help but don't need a full-time hire
+
+## Contact
+
+- Email: zak@keenai.com.au
+- TikTok: https://www.tiktok.com/@techforhumans
+- LinkedIn: https://www.linkedin.com/in/zak-levy-63560a200
+- GitHub: https://github.com/leroy052-cyber
+
+## Important Note
+
+Keen AI (keenai.com.au) is an Australian AI consulting business and is a
+separate entity from Keen AI Ltd (keen-ai.com), a UK-based company focused on
+infrastructure and utilities AI. We are not affiliated.

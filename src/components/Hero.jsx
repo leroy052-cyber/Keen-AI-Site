@@ -44,12 +44,20 @@ export default function Hero() {
       <div className="absolute top-1/4 right-[15%] w-64 h-64 rounded-full bg-accent/[0.03] blur-[100px] pointer-events-none" aria-hidden="true" />
       <div className="absolute bottom-1/4 left-[10%] w-48 h-48 rounded-full bg-mint/[0.03] blur-[80px] pointer-events-none" aria-hidden="true" />
 
+      {/* Skip nav link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-bg focus:text-sm focus:font-bold"
+      >
+        Skip to main content
+      </a>
+
       {/* Top bar */}
-      <div className="absolute top-0 left-0 right-0 flex justify-between items-center py-6 section-padding z-10">
+      <header className="absolute top-0 left-0 right-0 flex justify-between items-center py-6 section-padding z-10">
         <a href="#hero" className="font-bold text-xl tracking-tight" style={{ fontFamily: "'TASA Orbiter', sans-serif" }}>
           <span className="text-gradient">K</span>EEN<span className="text-gradient">_</span>AI
         </a>
-        <div className="hidden md:flex items-center gap-8 text-sm text-muted-light">
+        <nav className="hidden md:flex items-center gap-8 text-sm text-muted-light" aria-label="Main navigation">
           <a href="#services" className="hover:text-accent transition-colors duration-300">Services</a>
           <a href="#about" className="hover:text-accent transition-colors duration-300">About</a>
           <a
@@ -58,8 +66,8 @@ export default function Hero() {
           >
             Let's talk
           </a>
-        </div>
-      </div>
+        </nav>
+      </header>
 
       {/* Main content */}
       <div className="relative z-10 max-w-5xl pt-24">

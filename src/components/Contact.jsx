@@ -85,7 +85,7 @@ export default function Contact() {
         />
 
         {/* Footer */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <footer className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="font-bold text-xl tracking-tight" style={{ fontFamily: "'TASA Orbiter', sans-serif" }}>
             <span className="text-gradient">K</span>EEN<span className="text-gradient">_</span>AI
           </div>
@@ -111,7 +111,7 @@ export default function Contact() {
           <p className="text-xs text-muted">
             &copy; {new Date().getFullYear()} Keen AI. Built by a human.
           </p>
-        </div>
+        </footer>
       </div>
     </section>
   )
