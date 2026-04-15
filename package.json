@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/reem-kufi": "^5.2.11",
     "@fontsource/space-mono": "^5.2.9",
     "@fontsource/tasa-orbiter": "^5.2.2",
