@@ -46,8 +46,18 @@ export default function About() {
               Zak Levy
             </h2>
 
+            {/* Photo */}
+            <div className="relative mb-8 overflow-hidden" style={{ borderRadius: '0 40px 0 0' }}>
+              <img
+                src="/zak.jpg"
+                alt="Zak Levy in The Rocks, Sydney"
+                className="w-full aspect-[3/4] object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg/60 via-transparent to-transparent pointer-events-none" />
+            </div>
+
             {/* Decorative element */}
-            <div className="hidden md:flex flex-col gap-2 mt-8">
+            <div className="hidden md:flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-accent" />
                 <span className="text-xs text-muted">Builder</span>
