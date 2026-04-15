@@ -87,7 +87,7 @@ export default function Contact() {
         {/* Footer */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="font-bold text-lg tracking-tight">
-            <span className="text-gradient">k</span>een<span className="text-accent">_</span>ai
+            <span className="text-gradient">K</span>EEN<span className="text-gradient">_</span>AI
           </div>
 
           <div className="flex items-center gap-6">

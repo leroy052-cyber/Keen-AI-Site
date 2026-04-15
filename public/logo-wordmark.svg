@@ -6,11 +6,14 @@
       <stop offset="100%" stop-color="#00FFB2"/>
     </linearGradient>
     <clipPath id="kClip">
-      <text x="30" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180">k</text>
+      <text x="30" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180">K</text>
+    </clipPath>
+    <clipPath id="uClip">
+      <text x="575" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180">_</text>
     </clipPath>
   </defs>
   <rect x="0" y="0" width="1100" height="220" fill="url(#kGrad)" clip-path="url(#kClip)"/>
-  <text x="140" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180" fill="#fafafa">een</text>
-  <text x="575" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180" fill="#BFFF00">_</text>
-  <text x="690" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180" fill="#fafafa">ai</text>
+  <text x="140" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180" fill="#fafafa">EEN</text>
+  <rect x="0" y="0" width="1100" height="220" fill="url(#kGrad)" clip-path="url(#uClip)"/>
+  <text x="690" y="175" font-family="'Space Mono', monospace" font-weight="bold" font-size="180" fill="#fafafa">AI</text>
 </svg>

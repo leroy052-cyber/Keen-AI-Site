@@ -47,7 +47,7 @@ export default function Hero() {
       {/* Top bar */}
       <div className="absolute top-0 left-0 right-0 flex justify-between items-center py-6 section-padding z-10">
         <a href="#hero" className="font-bold text-lg tracking-tight">
-          <span className="text-gradient">k</span>een<span className="text-accent">_</span>ai
+          <span className="text-gradient">K</span>EEN<span className="text-gradient">_</span>AI
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-light">
           <a href="#services" className="hover:text-accent transition-colors duration-300">Services</a>
