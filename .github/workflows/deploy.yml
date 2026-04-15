@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - claude/keen-ai-website-design-Ia04O
+      - website-testing
       - main
 
 permissions:
