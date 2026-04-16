@@ -1,43 +1,37 @@
 # Keen AI
 
-> Australian AI consulting firm helping small businesses, tradies, and agencies
-> find where AI fits. Founded by Zak Levy. Based in Australia.
+> Australian AI workflow automation for allied health clinics — physiotherapy,
+> psychology, occupational therapy, speech pathology, and podiatry. Founded by
+> Zak Levy. Based in Australia.
 
 ## About
 
-Keen AI is an Australian-owned AI consulting company. We help small businesses,
-tradespeople, and agencies implement AI and automation — practically, without
-jargon, and without overcomplicating things.
+Keen AI builds custom AI workflows for Australian allied health clinics. We
+handle documentation assist, patient recall automation, and intake flows —
+integrating with your existing practice management software (Cliniko, Halaxy,
+Nookal, Power Diary) and handing you the keys when we're done.
 
-Our approach: we learn your business, find what's worth fixing, build the
-solution, and hand you the keys. Not everything needs AI — sometimes it's a
-better spreadsheet, a simpler process, or just someone telling you your current
-system is fine.
+Our approach: discovery audit, build in two to three weeks, deploy and hand
+over. No ongoing subscription, no vendor lock-in. You own everything we build.
 
 - **Website:** https://keenai.com.au
 - **Email:** zak@keenai.com.au
 - **Location:** Australia
 - **Founded by:** Zak Levy
-- **Specialties:** AI Consulting, Business Automation, AI Integration, Workflow Automation
-- **Target clients:** Small business owners, tradies & service businesses, agencies & small teams
+- **Specialties:** Clinical Documentation Automation, Patient Recall Automation, Intake Flow Automation, Healthcare Workflow AI
+- **Target clients:** Allied health clinic owners (physio, psychology, OT, speech pathology, podiatry), 2–10 practitioners
 
 ## Services
 
-- [Business Discovery & AI Assessment](https://keenai.com.au/#services): We learn how your business actually runs and identify where AI and automation can save you time.
-- [Custom AI & Automation Build](https://keenai.com.au/#services): We build workflows, automations, and integrations tailored to fit your existing operations.
-- [Training & Handover](https://keenai.com.au/#services): We explain everything in plain English and hand you the keys so you can run it independently.
+- [Discovery Audit](https://keenai.com.au/#how-it-works): Focused workflow audit mapping your clinic's documentation, recall, intake, and billing processes to identify the highest-value automations.
+- [Custom AI Workflow Build](https://keenai.com.au/#how-it-works): Two-to-three week build of custom AI workflows shaped around your PMS, clinical protocols, and practice operations.
+- [Deploy & Handover](https://keenai.com.au/#how-it-works): Deployment into your live environment, team training, and full handover with two weeks of post-launch support.
 
-## Who We Help
+## What We Build
 
-- **Small business owners** overwhelmed by admin, too busy to figure out where AI fits
-- **Tradies & service businesses** who are great at what they do but drowning in quoting, invoicing, and scheduling
-- **Agencies & small teams** that know AI could help but don't need a full-time hire
-
-## Blog
-
-- [AI for Tradies: What Actually Works in 2026](https://keenai.com.au/blog/ai-for-tradies-australia): Practical guide to AI and automation for Australian tradies and service businesses — quoting, invoicing, scheduling.
-- [A Small Business Owner's Honest Guide to AI Automation](https://keenai.com.au/blog/small-business-ai-automation-australia): Where to start with AI automation, what it costs, and how to tell if you actually need it.
-- [Do You Actually Need an AI Consultant?](https://keenai.com.au/blog/do-you-need-ai-consultant): An honest framework for figuring out whether you need professional help or can sort it out yourself.
+- **Documentation assist** — AI-drafted SOAP notes and progress reports from session audio, reviewed and signed off by the clinician.
+- **Recall automation** — Automated patient recall sequences triggered by treatment plans, integrated with your PMS.
+- **Intake flow** — End-to-end new patient intake from online forms through to appointment booking and Medicare eligibility checks.
 
 ## Contact
 

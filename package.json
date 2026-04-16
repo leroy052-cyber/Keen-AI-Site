@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/reem-kufi": "^5.2.11",
-    "@fontsource/space-mono": "^5.2.9",
+    "@fontsource/instrument-sans": "^5.2.8",
+    "@fontsource/instrument-serif": "^5.2.8",
     "@fontsource/tasa-orbiter": "^5.2.2",
     "@vercel/analytics": "^2.0.1",
     "gsap": "^3.12.5",

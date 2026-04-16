@@ -1,23 +1,20 @@
 import { useEffect, useRef } from 'react'
 
-const audiences = [
+const painPoints = [
   {
-    label: 'Small business owners',
-    text: "You've got 47 browser tabs open and at least three of them are the same form. You've thought about automating things roughly a hundred times but you're too busy actually running the business to sit down and figure out where to start, which is sort of the whole problem.",
-    accent: '#BFFF00',
-    icon: '→',
+    label: 'Clinical documentation',
+    text: "You finished your last patient at 5:30 and you're still writing SOAP notes at 8pm. Progress notes, treatment summaries, discharge letters — the clinical work expands to fill every evening you were hoping to spend somewhere else.",
+    accent: '#2D5A3D',
   },
   {
-    label: 'Tradies & service businesses',
-    text: "Brilliant at what you do, less thrilled about the quoting and invoicing and chasing and scheduling that surrounds what you do. There's a version of your week where all that stuff just... happens, and it's not as far off as you think.",
-    accent: '#00FFB2',
-    icon: '→',
+    label: 'Patient recall & retention',
+    text: "Patients drop off after three sessions and nobody notices until the revenue dip shows up months later. Your PMS has a recall feature somewhere in a menu you've never opened, and the patients who need rebooking are quietly disappearing.",
+    accent: '#3A7A52',
   },
   {
-    label: 'Agencies & small teams',
-    text: "You know AI could plug into what you're doing but you don't need a full-time person for it, you need someone who turns up, builds the thing properly, explains it in plain English, and then gets out of the way.",
-    accent: '#10B981',
-    icon: '→',
+    label: 'Intake & admin overhead',
+    text: "New patient paperwork, Medicare claims, invoice chasing, referral letters — your front desk is spending half their day on tasks that feel like they should just happen automatically. Cliniko or Halaxy handles some of it, but the gaps between tools are where the hours go.",
+    accent: '#1E3D2A',
   },
 ]
 
@@ -51,51 +48,48 @@ export default function Audience() {
   }, [])
 
   return (
-    <section id="audience" className="py-32 md:py-40 section-padding section-elevated">
+    <section id="pain-points" className="py-32 md:py-40 section-padding section-elevated">
       <div className="max-w-5xl mx-auto">
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-8 h-px bg-gradient-to-r from-mint to-emerald" />
-            <span className="text-xs text-mint tracking-widest uppercase">
-              Who this is for
+            <div className="w-8 h-px bg-gradient-to-r from-forest to-forest-light" />
+            <span className="text-xs text-forest tracking-widest uppercase font-medium">
+              Sound familiar?
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-            If any of this sounds<br />familiar, we should talk.
+          <h2 className="text-3xl md:text-5xl font-serif tracking-tight leading-tight text-ink">
+            The work you trained for keeps getting<br />
+            <span className="italic text-forest">buried under the work you didn't.</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {audiences.map((audience, i) => (
+          {painPoints.map((point, i) => (
             <div
-              key={audience.label}
+              key={point.label}
               ref={(el) => (itemRefs.current[i] = el)}
               className="card-glow group relative p-6 md:p-8"
             >
               {/* Top accent line */}
               <div
                 className="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ background: `linear-gradient(90deg, ${audience.accent}, transparent)` }}
+                style={{ background: `linear-gradient(90deg, ${point.accent}, transparent)` }}
               />
 
-              {/* Number dot */}
               <div
                 className="w-2 h-2 rounded-full mb-6"
-                style={{
-                  backgroundColor: audience.accent,
-                  boxShadow: `0 0 10px ${audience.accent}40`,
-                }}
+                style={{ backgroundColor: point.accent }}
               />
 
               <h3
-                className="text-xs tracking-widest uppercase block mb-4 font-bold"
-                style={{ color: audience.accent }}
+                className="text-xs tracking-widest uppercase block mb-4 font-semibold"
+                style={{ color: point.accent }}
               >
-                {audience.label}
+                {point.label}
               </h3>
 
-              <p className="text-muted-light leading-relaxed text-sm">
-                {audience.text}
+              <p className="text-ink-light leading-relaxed text-sm">
+                {point.text}
               </p>
             </div>
           ))}

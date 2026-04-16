@@ -1,30 +1,27 @@
 import { useEffect, useRef } from 'react'
 
-const steps = [
+const differentiators = [
   {
-    number: '01',
-    title: 'Discovery Audit',
+    label: 'Broader than scribing',
     description:
-      "We spend a focused session mapping your clinic's workflows — documentation, recall, intake, billing — and identify the two or three automations that will actually move the needle. No 40-page report. A clear list of what to build first and why.",
+      "Heidi and Lyrebird are excellent at what they do — in-consult transcription. But scribing is one piece of the puzzle. We automate the whole workflow: documentation, recall, intake, billing. One engagement, not five subscriptions.",
     color: '#2D5A3D',
   },
   {
-    number: '02',
-    title: 'Build',
+    label: 'Priced for clinics, not hospitals',
     description:
-      "Over two to three weeks, we build your custom workflows. These aren't generic templates — they're shaped around your PMS, your clinical protocols, and the specific way your practice runs. You see progress throughout, not a big reveal at the end.",
+      "Enterprise consultancies charge enterprise rates for a 12-week discovery phase. We ship working automation in two to three weeks, priced for a clinic with four practitioners, not a hospital group with a procurement department.",
     color: '#3A7A52',
   },
   {
-    number: '03',
-    title: 'Deploy & Handover',
+    label: 'Always on, always consistent',
     description:
-      "We deploy into your live environment, train your team, and hand you the keys. These workflows are yours — no ongoing subscription to us, no vendor lock-in. We stick around for two weeks post-launch to make sure everything beds in properly.",
+      "A virtual assistant goes home. These workflows run around the clock — recalling patients at 7am, processing intake forms at midnight, drafting notes while you see the next patient. Zero marginal cost, zero sick days.",
     color: '#1E3D2A',
   },
 ]
 
-export default function Services() {
+export default function WhyUs() {
   const itemRefs = useRef([])
 
   useEffect(() => {
@@ -54,44 +51,40 @@ export default function Services() {
   }, [])
 
   return (
-    <section id="how-it-works" className="py-32 md:py-40 section-padding section-elevated">
+    <section id="why-us" className="py-32 md:py-40 section-padding section-glow">
       <div className="max-w-5xl mx-auto">
         <div className="mb-20">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-px bg-gradient-to-r from-forest to-forest-light" />
             <span className="text-xs text-forest tracking-widest uppercase font-medium">
-              How it works
+              Why us
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-serif tracking-tight leading-tight text-ink">
-            Discovery to deployment<br />
-            <span className="italic text-forest">in weeks, not months.</span>
+            Not the only option.<br />
+            <span className="italic text-forest">Just the right-shaped one.</span>
           </h2>
         </div>
 
         <div className="space-y-0">
-          {steps.map((step, i) => (
+          {differentiators.map((item, i) => (
             <div
-              key={step.number}
+              key={item.label}
               ref={(el) => (itemRefs.current[i] = el)}
-              className="group grid grid-cols-1 md:grid-cols-[80px_1fr_1.5fr] gap-4 md:gap-8 py-10 border-t border-border hover:bg-cream-warm/50 transition-all duration-500 px-4 -mx-4"
+              className="group grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-4 md:gap-12 py-10 border-t border-border hover:bg-cream-warm/50 transition-all duration-500 px-4 -mx-4"
             >
-              <span
-                className="text-sm font-semibold"
-                style={{ color: step.color }}
+              <h3
+                className="text-lg md:text-xl font-serif transition-colors duration-300 group-hover:text-forest text-ink"
               >
-                {step.number}
-              </span>
-              <h3 className="text-xl md:text-2xl font-serif transition-colors duration-300 group-hover:text-forest text-ink">
-                {step.title}
+                {item.label}
               </h3>
               <div>
                 <p className="text-ink-light leading-relaxed text-sm md:text-base">
-                  {step.description}
+                  {item.description}
                 </p>
                 <div
                   className="mt-4 h-[2px] w-0 group-hover:w-16 transition-all duration-500"
-                  style={{ background: `linear-gradient(90deg, ${step.color}, transparent)` }}
+                  style={{ background: `linear-gradient(90deg, ${item.color}, transparent)` }}
                 />
               </div>
             </div>
