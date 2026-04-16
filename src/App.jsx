@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import Hero from './components/Hero'
 import StickyText from './components/StickyText'
 import Services from './components/Services'
@@ -10,6 +11,7 @@ import ScrollProgress from './components/ScrollProgress'
 export default function App() {
   return (
     <div className="noise-overlay">
+      <Analytics />
       <CustomCursor />
       <ScrollProgress />
       <Hero />

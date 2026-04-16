@@ -12,6 +12,7 @@
     "@fontsource/reem-kufi": "^5.2.11",
     "@fontsource/space-mono": "^5.2.9",
     "@fontsource/tasa-orbiter": "^5.2.2",
+    "@vercel/analytics": "^2.0.1",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
