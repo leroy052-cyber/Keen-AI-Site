@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Contact() {
   const contentRef = useRef(null)
-  const [hoveredLink, setHoveredLink] = useState(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,35 +48,31 @@ export default function Contact() {
           <span className="text-gradient">do this.</span>
         </h2>
 
-        <p className="text-muted-light text-lg max-w-lg mb-16 leading-relaxed">
-          Send me an email, tell me what's chewing up your time, and we'll have a proper conversation about whether AI is the right fix or if you just need someone to tell you your current system is fine and you should stop worrying about it.
+        <p className="text-muted-light text-lg max-w-lg mb-12 leading-relaxed">
+          Tell us what's chewing up your time and we'll have a proper conversation about whether AI can actually help — or whether you just need a better spreadsheet.
         </p>
 
-        {/* Contact link */}
+        {/* CTA to contact form */}
         <div className="mb-20">
-          <a
-            href="mailto:zak@keenai.com.au"
-            className="group block"
-            onMouseEnter={() => setHoveredLink('email')}
-            onMouseLeave={() => setHoveredLink(null)}
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-3 px-8 py-4 font-bold text-sm uppercase tracking-wider transition-all duration-300"
+            style={{
+              background: 'linear-gradient(135deg, #BFFF00 0%, #84CC16 100%)',
+              color: '#0a0a0a',
+            }}
           >
-            <span className="inline-flex items-center gap-4 text-2xl md:text-4xl font-bold transition-colors duration-300 hover:text-accent">
-              zak@keenai.com.au
-              <svg
-                className={`w-6 h-6 md:w-8 md:h-8 transition-all duration-300 ${hoveredLink === 'email' ? 'translate-x-2 -translate-y-2 text-mint' : 'text-muted'}`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path strokeLinecap="square" d="M7 17L17 7M17 7H7M17 7v10" />
-              </svg>
-            </span>
-            {/* Expanding underline */}
-            <div className="h-[2px] mt-2 w-0 group-hover:w-full transition-all duration-500"
-              style={{ background: 'linear-gradient(90deg, #BFFF00, #00FFB2)' }}
-            />
-          </a>
+            Get in touch
+            <svg
+              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
+              <path strokeLinecap="square" d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
 
         {/* Divider */}
