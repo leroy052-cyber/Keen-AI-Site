@@ -25,6 +25,9 @@ function Nav() {
         <Link to="/services" className={linkClass('/services')}>
           Services
         </Link>
+        <Link to="/case-studies" className={linkClass('/case-studies')}>
+          Case Studies
+        </Link>
         <Link to="/about" className={linkClass('/about')}>
           About
         </Link>
@@ -56,15 +59,21 @@ function Footer() {
             <span className="text-gradient">_</span>AI
           </Link>
 
-          <div className="flex items-center gap-8 text-sm text-muted-light">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-muted-light">
             <Link to="/services" className="hover:text-accent transition-colors duration-300">
               Services
+            </Link>
+            <Link to="/case-studies" className="hover:text-accent transition-colors duration-300">
+              Case Studies
             </Link>
             <Link to="/about" className="hover:text-accent transition-colors duration-300">
               About
             </Link>
             <Link to="/blog" className="hover:text-accent transition-colors duration-300">
               Blog
+            </Link>
+            <Link to="/faq" className="hover:text-accent transition-colors duration-300">
+              FAQ
             </Link>
             <Link to="/contact" className="hover:text-accent transition-colors duration-300">
               Contact
@@ -102,9 +111,12 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border-subtle/50">
+        <div className="mt-8 pt-8 border-t border-border-subtle/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <p className="text-xs text-muted">
             &copy; {new Date().getFullYear()} Keen AI. Built by a human.
+          </p>
+          <p className="text-xs text-muted">
+            We build AI responsibly.
           </p>
         </div>
       </div>

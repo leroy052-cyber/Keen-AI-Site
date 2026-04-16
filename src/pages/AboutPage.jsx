@@ -1,8 +1,34 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
+
+const values = [
+  {
+    title: "We'll tell you if you don't need AI",
+    desc: "Not everything needs a fancy solution. Sometimes it's a spreadsheet, sometimes it's a better process. We'll be straight with you.",
+    accent: '#BFFF00',
+  },
+  {
+    title: 'We build for handoff, not dependency',
+    desc: "If you need us hovering forever, we haven't done our job. Everything we build, you own and run yourself.",
+    accent: '#00FFB2',
+  },
+  {
+    title: 'Plain English, always',
+    desc: "No jargon, no acronyms dropped to sound clever, no 47-slide decks. If we can't explain it simply, we don't understand it well enough.",
+    accent: '#10B981',
+  },
+  {
+    title: 'Your business, your tools',
+    desc: "We work around what you've already got. The best automation fits into your existing workflow — not the other way around.",
+    accent: '#84CC16',
+  },
+]
 
 export default function AboutPage() {
   const headerRef = useRef(null)
-  const contentRef = useRef(null)
+  const storyRef = useRef(null)
+  const valuesRef = useRef(null)
+  const tiktokRef = useRef(null)
 
   useEffect(() => {
     if (headerRef.current) {
@@ -29,13 +55,15 @@ export default function AboutPage() {
       { threshold: 0.15 }
     )
 
-    if (contentRef.current) {
-      contentRef.current.style.opacity = '0'
-      contentRef.current.style.transform = 'translateY(40px)'
-      contentRef.current.style.transition =
-        'opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-      observer.observe(contentRef.current)
-    }
+    ;[storyRef, valuesRef, tiktokRef].forEach((ref) => {
+      if (ref.current) {
+        ref.current.style.opacity = '0'
+        ref.current.style.transform = 'translateY(40px)'
+        ref.current.style.transition =
+          'opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+        observer.observe(ref.current)
+      }
+    })
 
     return () => observer.disconnect()
   }, [])
@@ -52,98 +80,179 @@ export default function AboutPage() {
               The human behind it
             </span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95] mb-8">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[0.95] mb-6">
             Zak Levy
           </h1>
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-accent" />
+              <span className="text-xs text-muted">Builder</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-mint" />
+              <span className="text-xs text-muted">AI Consultant</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-emerald" />
+              <span className="text-xs text-muted">Content Creator</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* About Content */}
+      {/* The Story */}
       <section className="pb-32 md:pb-40 section-padding section-warm relative">
         <div className="max-w-5xl mx-auto relative">
-          <div
-            ref={contentRef}
-            className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 md:gap-20"
-          >
-            {/* Left column */}
-            <div>
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-accent" />
-                  <span className="text-xs text-muted">Builder</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-mint" />
-                  <span className="text-xs text-muted">AI Consultant</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-emerald" />
-                  <span className="text-xs text-muted">Content Creator</span>
-                </div>
-              </div>
+          <div ref={storyRef} className="max-w-2xl space-y-6">
+            <p className="text-lg md:text-xl text-surface leading-relaxed">
+              I used to be a tradesperson, which is a strange thing to lead
+              with on an AI consulting website, but it&rsquo;s actually the most
+              relevant thing about me.
+            </p>
+            <p className="text-muted-light leading-relaxed">
+              Years of building things with my hands taught me something that
+              carries over surprisingly well: you show up, you look at the
+              problem, you figure out the right tool for the job, and you
+              don&rsquo;t overcomplicate it. I started Keen AI because I kept
+              meeting smart business owners burning hours on things that a
+              well-placed bit of automation could handle before their morning
+              coffee went cold — and nobody was helping them in a way that
+              actually made sense.
+            </p>
+            <p className="text-muted-light leading-relaxed">
+              Most AI consultants talk to enterprises with six-figure budgets.
+              I talk to the plumber who&rsquo;s quoting jobs at 10pm, the agency
+              owner toggling between 14 browser tabs, and the clinic manager
+              who spends half their week on things a well-built bot could handle
+              in seconds. That&rsquo;s the gap I fill.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-32 md:py-40 section-padding section-glow">
+        <div className="max-w-5xl mx-auto" ref={valuesRef}>
+          <div className="mb-16">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-px bg-gradient-to-r from-accent to-mint" />
+              <span className="text-xs text-accent tracking-widest uppercase">
+                How we roll
+              </span>
             </div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+              A few things we <span className="text-gradient">actually believe.</span>
+            </h2>
+          </div>
 
-            {/* Right column */}
-            <div className="space-y-6">
-              <p className="text-lg md:text-xl text-surface leading-relaxed">
-                I used to be a tradesperson, which is a strange thing to lead
-                with on an AI consulting website, but it's actually the most
-                relevant thing about me.
-              </p>
-              <p className="text-muted-light leading-relaxed">
-                Years of building things with my hands taught me something that
-                carries over surprisingly well: you show up, you look at the
-                problem, you figure out the right tool for the job, and you
-                don't overcomplicate it. I started Keen AI because I kept
-                meeting smart business owners burning hours on things that a
-                well-placed bit of automation could handle before their morning
-                coffee went cold — and nobody was helping them in a way that
-                actually made sense.
-              </p>
-              <p className="text-muted-light leading-relaxed">
-                I also make content as{' '}
-                <span className="text-mint font-bold">Tech for Humans</span>{' '}
-                on TikTok, where I try to talk about AI and tech the way you'd
-                explain it to a mate at the pub — because honestly, if you
-                can't do that, you probably don't understand it as well as you
-                think you do.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {values.map((value) => (
+              <div key={value.title} className="card-glow group relative p-6 md:p-8">
+                <div
+                  className="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ background: `linear-gradient(90deg, ${value.accent}, transparent)` }}
+                />
+                <div
+                  className="w-2 h-2 rounded-full mb-4"
+                  style={{ backgroundColor: value.accent, boxShadow: `0 0 10px ${value.accent}40` }}
+                />
+                <h3 className="text-sm font-bold mb-3 group-hover:text-accent transition-colors duration-300">
+                  {value.title}
+                </h3>
+                <p className="text-muted-light text-sm leading-relaxed">{value.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              {/* Social links */}
-              <div className="flex items-center gap-6 pt-4">
+      {/* Tech for Humans */}
+      <section className="py-32 md:py-40 section-padding section-elevated">
+        <div className="max-w-5xl mx-auto" ref={tiktokRef}>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 md:gap-20 items-start">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-px bg-gradient-to-r from-mint to-emerald" />
+                <span className="text-xs text-mint tracking-widest uppercase">
+                  Content
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-4">
+                <span className="text-mint">Tech for Humans</span>
+              </h2>
+              <p className="text-muted-light leading-relaxed mb-6">
+                I make content on TikTok where I try to talk about AI and tech
+                the way you&rsquo;d explain it to a mate at the pub — because
+                honestly, if you can&rsquo;t do that, you probably don&rsquo;t
+                understand it as well as you think you do.
+              </p>
+              <div className="flex items-center gap-6">
                 <a
                   href="https://www.tiktok.com/@techforhumans"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 text-sm text-muted-light hover:text-mint transition-colors duration-300"
+                  className="group inline-flex items-center gap-3 px-6 py-3 font-bold text-sm uppercase tracking-wider border border-mint/40 text-mint hover:bg-mint hover:text-bg hover:border-mint transition-all duration-300 cursor-none"
                 >
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.18 8.18 0 004.77 1.52V6.84a4.84 4.84 0 01-1-.15z" />
+                  Watch on TikTok
+                  <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="square" d="M7 17L17 7M17 7H7M17 7v10" />
                   </svg>
-                  TikTok
                 </a>
                 <a
                   href="https://www.linkedin.com/in/zak-levy-63560a200/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 text-sm text-muted-light hover:text-accent transition-colors duration-300"
+                  className="text-sm text-muted-light hover:text-accent transition-colors duration-300"
                 >
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
                   LinkedIn
                 </a>
               </div>
             </div>
+
+            <div className="card-glow p-8 md:p-10">
+              <p className="text-muted tracking-widest uppercase text-[10px] mb-6">
+                What you&rsquo;ll find
+              </p>
+              <ul className="space-y-4">
+                {[
+                  'AI explained without the jargon — like, actually without it',
+                  'Tool reviews and comparisons from someone who builds with them daily',
+                  'Automation ideas for real businesses, not tech demos',
+                  'Honest takes on what AI can and can\u2019t do (spoiler: it can\u2019t do everything)',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-mint mt-2 flex-shrink-0" />
+                    <span className="text-muted-light text-sm leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 md:py-32 section-padding section-glow relative">
+        <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] bg-accent/[0.03] blur-[100px] rounded-full pointer-events-none" aria-hidden="true" />
+        <div className="max-w-5xl mx-auto relative text-center">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
+            Want to <span className="text-gradient">work together?</span>
+          </h2>
+          <p className="text-muted-light max-w-lg mx-auto leading-relaxed mb-10">
+            I&rsquo;m always up for a chat — especially if you&rsquo;ve got a
+            problem that&rsquo;s been bugging you and you&rsquo;re not sure
+            if AI is the answer.
+          </p>
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-3 px-8 py-4 font-bold text-sm uppercase tracking-wider transition-all duration-300 cursor-none"
+            style={{ background: 'linear-gradient(135deg, #BFFF00 0%, #84CC16 100%)', color: '#0a0a0a' }}
+          >
+            Get in touch
+            <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="square" d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </section>
     </>
