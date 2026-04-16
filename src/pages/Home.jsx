@@ -1,62 +1,62 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import StickyText from '../components/StickyText'
-
-const toolLogos = [
-  'OpenAI', 'Anthropic', 'Make', 'Zapier', 'n8n', 'Power Automate', 'Python', 'LangChain',
-]
-
-const serviceHighlights = [
-  {
-    title: 'Automation & Workflows',
-    desc: 'The repetitive stuff that eats your week — invoicing, scheduling, data entry — made to run itself.',
-    accent: '#BFFF00',
-  },
-  {
-    title: 'AI Chatbots & Assistants',
-    desc: 'Customer support bots, internal knowledge bots, voice agents — your new team member that never sleeps.',
-    accent: '#84CC16',
-  },
-  {
-    title: 'Data & Insights',
-    desc: "Dashboards, predictions, and analytics that show you what's actually happening in your business.",
-    accent: '#00FFB2',
-  },
-  {
-    title: 'AI Agents & Strategy',
-    desc: 'From readiness assessments to autonomous digital workers — the frontier stuff and the foundations.',
-    accent: '#10B981',
-  },
-]
+import ToolLogos from '../components/ToolLogos'
 
 const steps = [
-  { num: '01', title: 'We listen', color: '#BFFF00' },
-  { num: '02', title: 'We find the problem', color: '#84CC16' },
-  { num: '03', title: 'We build the fix', color: '#00FFB2' },
-  { num: '04', title: 'We hand you the keys', color: '#10B981' },
+  {
+    num: '01',
+    title: 'We learn your business',
+    desc: "We sit with you, ask probably too many questions, and get genuinely curious about the weird way your business actually runs — because that's where the good stuff hides.",
+    color: '#BFFF00',
+  },
+  {
+    num: '02',
+    title: "We find what's worth fixing",
+    desc: "Not everything needs AI. Sometimes it's a spreadsheet, sometimes it's a better process. We'll tell you that to your face — and save AI for where it actually matters.",
+    color: '#84CC16',
+  },
+  {
+    num: '03',
+    title: 'We build the thing',
+    desc: "Workflows, automations, integrations — whatever shape the fix takes. Built to fit the way you already work, not the other way around.",
+    color: '#00FFB2',
+  },
+  {
+    num: '04',
+    title: 'We hand you the keys',
+    desc: "We make sure you understand what we built, why it works, and how to run it without us hovering. If you never need to call us again, we've done our job.",
+    color: '#10B981',
+  },
 ]
 
 const audiences = [
   {
     label: 'Small business owners',
-    text: "You've got 47 browser tabs open and at least three of them are the same form. You've thought about automating things roughly a hundred times but you're too busy actually running the business to figure out where to start.",
+    text: "47 browser tabs open, three of them are the same form. You've thought about automating things a hundred times but you're too busy running the business.",
     accent: '#BFFF00',
+    stat: '10+',
+    statLabel: 'hrs/week saved on average',
   },
   {
     label: 'Tradies & service businesses',
-    text: "Brilliant at what you do, less thrilled about the quoting and invoicing and chasing and scheduling that surrounds what you do. There's a version of your week where all that stuff just... happens.",
+    text: "Brilliant at what you do, less thrilled about the quoting and invoicing and chasing that surrounds it. There's a version of your week where that just... happens.",
     accent: '#00FFB2',
+    stat: '80%',
+    statLabel: 'less time on admin tasks',
   },
   {
     label: 'Agencies & small teams',
-    text: "You know AI could plug into what you're doing but you don't need a full-time person for it — you need someone who turns up, builds the thing properly, explains it in plain English, and then gets out of the way.",
+    text: "You know AI could plug into what you're doing but you don't need a full-time hire — you need someone who builds it properly and then gets out of the way.",
     accent: '#10B981',
+    stat: '3x',
+    statLabel: 'faster reporting pipelines',
   },
 ]
 
 export default function Home() {
   const heroRef = useRef(null)
-  const cardRefs = useRef([])
+  const stepRefs = useRef([])
   const audienceRefs = useRef([])
 
   useEffect(() => {
@@ -85,7 +85,7 @@ export default function Home() {
       { threshold: 0.15 }
     )
 
-    ;[...cardRefs.current, ...audienceRefs.current].forEach((el, i) => {
+    ;[...stepRefs.current, ...audienceRefs.current].forEach((el, i) => {
       if (el) {
         el.style.opacity = '0'
         el.style.transform = 'translateY(30px)'
@@ -140,7 +140,7 @@ export default function Home() {
             data-animate
             className="text-lg md:text-xl text-muted-light max-w-xl leading-relaxed mb-12"
           >
-            Most businesses don't need a giant AI strategy — they need someone
+            Most businesses don&rsquo;t need a giant AI strategy — they need someone
             to walk in, look at the mess, and quietly make half of it disappear.
           </p>
 
@@ -178,163 +178,94 @@ export default function Home() {
       {/* Sticky Text Marquee */}
       <StickyText />
 
-      {/* Trust Bar */}
-      <section className="py-12 section-padding border-b border-border-subtle/50">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-[10px] text-muted tracking-widest uppercase text-center mb-6">
-            Tools we work with
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
-            {toolLogos.map((tool) => (
-              <span
-                key={tool}
-                className="text-xs text-muted-light/60 tracking-wider uppercase hover:text-accent/80 transition-colors duration-300"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Trust Bar — Tool Logos */}
+      <ToolLogos />
 
-      {/* Services Preview */}
-      <section className="py-32 md:py-40 section-padding section-glow">
+      {/* How It Works — Expanded */}
+      <section className="py-28 md:py-36 section-padding section-glow">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-16">
+          <div className="mb-14">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-px bg-gradient-to-r from-accent to-mint" />
               <span className="text-xs text-accent tracking-widest uppercase">
-                What we do
+                How it works
               </span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
-              We listen, find the problem,
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+              Four steps, one of them is
               <br />
-              <span className="text-gradient">and build the fix.</span>
+              <span className="text-gradient">just listening.</span>
             </h2>
-            <p className="text-muted-light max-w-2xl leading-relaxed">
-              Not everything needs AI, and we'll tell you that to your face.
-              But when it does — workflows, automations, integrations — we
-              build it to fit the way you already work.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-            {serviceHighlights.map((service, i) => (
+          <div className="space-y-0">
+            {steps.map((step, i) => (
               <div
-                key={service.title}
-                ref={(el) => (cardRefs.current[i] = el)}
-                className="card-glow group relative p-6"
+                key={step.num}
+                ref={(el) => (stepRefs.current[i] = el)}
+                className="group grid grid-cols-1 md:grid-cols-[60px_1fr_1.5fr] gap-3 md:gap-8 py-8 border-t border-border-subtle hover:bg-bg-elevated/50 transition-all duration-500 px-4 -mx-4"
               >
-                <div
-                  className="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  style={{ background: `linear-gradient(90deg, ${service.accent}, transparent)` }}
-                />
-                <div className="flex items-start gap-4">
+                <span className="text-sm font-bold" style={{ color: step.color }}>
+                  {step.num}
+                </span>
+                <h3 className="text-lg md:text-xl font-bold transition-colors duration-300 group-hover:text-accent">
+                  {step.title}
+                </h3>
+                <div>
+                  <p className="text-muted-light leading-relaxed text-sm">
+                    {step.desc}
+                  </p>
                   <div
-                    className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0"
-                    style={{ backgroundColor: service.accent, boxShadow: `0 0 10px ${service.accent}40` }}
+                    className="mt-4 h-[2px] w-0 group-hover:w-16 transition-all duration-500"
+                    style={{ background: `linear-gradient(90deg, ${step.color}, transparent)` }}
                   />
-                  <div>
-                    <h3 className="text-sm font-bold mb-2 transition-colors duration-300" style={{ color: service.accent }}>
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-light text-sm leading-relaxed">{service.desc}</p>
-                  </div>
                 </div>
               </div>
             ))}
           </div>
-
-          <Link
-            to="/services"
-            className="group inline-flex items-center gap-3 text-sm text-accent hover:text-accent-glow transition-colors duration-300 cursor-none"
-          >
-            See everything we can build
-            <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="square" d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
         </div>
       </section>
 
-      {/* How We Work — Condensed */}
-      <section className="py-24 md:py-32 section-padding section-elevated">
+      {/* Who This Is For — Tighter with stats */}
+      <section className="py-28 md:py-36 section-padding section-elevated">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-12">
+          <div className="mb-14">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-px bg-gradient-to-r from-mint to-emerald" />
               <span className="text-xs text-mint tracking-widest uppercase">
-                How it works
-              </span>
-            </div>
-            <h2 className="text-2xl md:text-4xl font-bold tracking-tight leading-tight">
-              Four steps, one of them is <span className="text-gradient">just listening.</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {steps.map((step) => (
-              <div key={step.num} className="group">
-                <span className="text-xs font-bold block mb-2" style={{ color: step.color }}>
-                  {step.num}
-                </span>
-                <p className="text-sm font-bold text-surface group-hover:text-accent transition-colors duration-300">
-                  {step.title}
-                </p>
-                <div
-                  className="mt-3 h-[2px] w-0 group-hover:w-full transition-all duration-500"
-                  style={{ background: `linear-gradient(90deg, ${step.color}, transparent)` }}
-                />
-              </div>
-            ))}
-          </div>
-
-          <Link
-            to="/services"
-            className="group inline-flex items-center gap-3 text-sm text-mint hover:text-mint-dim transition-colors duration-300 cursor-none mt-8"
-          >
-            See the full process
-            <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="square" d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
-      </section>
-
-      {/* Audience */}
-      <section className="py-32 md:py-40 section-padding">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-gradient-to-r from-accent to-mint" />
-              <span className="text-xs text-accent tracking-widest uppercase">
                 Who this is for
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-              If any of this sounds
+              If any of this sounds familiar,
               <br />
-              familiar, we should talk.
+              <span className="text-gradient">we should talk.</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {audiences.map((audience, i) => (
               <div
                 key={audience.label}
                 ref={(el) => (audienceRefs.current[i] = el)}
-                className="card-glow group relative p-6 md:p-8"
+                className="card-glow group relative p-5 md:p-6"
               >
                 <div
                   className="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{ background: `linear-gradient(90deg, ${audience.accent}, transparent)` }}
                 />
-                <div
-                  className="w-2 h-2 rounded-full mb-6"
-                  style={{ backgroundColor: audience.accent, boxShadow: `0 0 10px ${audience.accent}40` }}
-                />
-                <span className="text-xs tracking-widest uppercase block mb-4 font-bold" style={{ color: audience.accent }}>
+
+                {/* Stat callout */}
+                <div className="mb-4">
+                  <span className="text-3xl md:text-4xl font-bold" style={{ color: audience.accent }}>
+                    {audience.stat}
+                  </span>
+                  <span className="text-[10px] text-muted tracking-widest uppercase block mt-1">
+                    {audience.statLabel}
+                  </span>
+                </div>
+
+                <span className="text-xs tracking-widest uppercase block mb-3 font-bold" style={{ color: audience.accent }}>
                   {audience.label}
                 </span>
                 <p className="text-muted-light leading-relaxed text-sm">{audience.text}</p>
@@ -344,30 +275,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof Placeholder */}
-      <section className="py-24 md:py-32 section-padding section-warm">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="card-glow p-10 md:p-16">
-            <p className="text-muted tracking-widest uppercase text-[10px] mb-6">Results</p>
-            <p className="text-xl md:text-2xl font-bold text-surface leading-relaxed max-w-2xl mx-auto mb-4">
-              &ldquo;We&rsquo;re building the receipts. Check back soon for case
-              studies with real numbers from real businesses.&rdquo;
-            </p>
-            <Link
-              to="/case-studies"
-              className="text-sm text-muted-light hover:text-accent transition-colors duration-300 underline underline-offset-4 decoration-border-subtle hover:decoration-accent cursor-none"
-            >
-              View case studies
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Free Offer Strip */}
-      <section className="py-24 md:py-32 section-padding section-glow relative">
+      {/* CTA Strip */}
+      <section className="py-20 md:py-28 section-padding section-glow relative">
         <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] bg-accent/[0.03] blur-[100px] rounded-full pointer-events-none" aria-hidden="true" />
         <div className="max-w-5xl mx-auto relative text-center">
-          <p className="text-muted tracking-widest uppercase text-[10px] mb-6">Free</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
             Book a free 30-minute
             <br />
@@ -375,7 +286,7 @@ export default function Home() {
           </h2>
           <p className="text-muted-light max-w-lg mx-auto leading-relaxed mb-10">
             No obligation. No sales pitch. Just an honest look at where AI
-            might help your business — and where it probably won&rsquo;t.
+            might actually help your business.
           </p>
           <Link
             to="/contact"

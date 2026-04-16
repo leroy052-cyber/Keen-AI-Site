@@ -113,10 +113,7 @@ function Footer() {
 
         <div className="mt-8 pt-8 border-t border-border-subtle/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <p className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} Keen AI. Built by a human.
-          </p>
-          <p className="text-xs text-muted">
-            We build AI responsibly.
+            &copy; {new Date().getFullYear()} Keen AI. Built by a human, with AI, for humans.
           </p>
         </div>
       </div>

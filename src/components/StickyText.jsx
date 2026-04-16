@@ -29,7 +29,6 @@ export default function StickyText() {
         const opacity = progress > 0.8 ? 1 - (progress - 0.8) / 0.2 : 1
         text.style.opacity = opacity
 
-        // Grow accent line with scroll
         if (accentLine) {
           accentLine.style.transform = `scaleX(${progress})`
         }
@@ -46,8 +45,8 @@ export default function StickyText() {
   }, [])
 
   return (
-    <div ref={containerRef} className="relative h-[200vh]" aria-hidden="true">
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div ref={containerRef} className="relative h-[120vh]" aria-hidden="true">
+      <div className="sticky top-0 h-[60vh] flex flex-col items-center justify-center overflow-hidden">
         {/* Accent line that grows */}
         <div
           ref={accentRef}
@@ -63,10 +62,11 @@ export default function StickyText() {
           className="whitespace-nowrap text-[15vw] md:text-[12vw] font-bold select-none will-change-transform"
           style={{
             transform: 'translateX(0%)',
-            background: 'linear-gradient(90deg, rgba(191,255,0,0.06), rgba(0,255,178,0.04), rgba(16,185,129,0.05), rgba(191,255,0,0.06))',
+            background: 'linear-gradient(90deg, #BFFF00, #00FFB2, #10B981, #BFFF00)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
+            opacity: 0.2,
           }}
         >
           KEEN AS • SHARP AS • BUILT FOR YOUR BUSINESS •
