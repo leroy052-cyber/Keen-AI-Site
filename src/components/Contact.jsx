@@ -44,9 +44,9 @@ function BriefForm({ iframeRef }) {
     return (
       <div className="py-12 text-center">
         <div className="w-3 h-3 rounded-full bg-forest mx-auto mb-5" />
-        <h4 className="text-xl font-serif text-ink mb-2">Brief received.</h4>
+        <h4 className="text-xl font-serif text-ink mb-2">You're on the list.</h4>
         <p className="text-ink-muted text-sm">
-          We'll come back within a day with builders who can do it, or a note if it's not a fit yet.
+          We'll be in touch as soon as the first wave of briefs gets hand-matched to builders — usually within a week.
         </p>
       </div>
     )
@@ -112,7 +112,7 @@ function BriefForm({ iframeRef }) {
         type="submit"
         className="group inline-flex items-center gap-3 px-6 py-3 font-semibold text-sm uppercase tracking-wider transition-all duration-300 bg-forest text-cream hover:bg-forest-deep"
       >
-        Post the brief
+        Register my interest
         <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
           <path strokeLinecap="square" d="M5 12h14M12 5l7 7-7 7" />
         </svg>
@@ -136,9 +136,9 @@ function BuilderForm({ iframeRef }) {
     return (
       <div className="py-12 text-center">
         <div className="w-3 h-3 rounded-full bg-forest mx-auto mb-5" />
-        <h4 className="text-xl font-serif text-ink mb-2">You're on the list.</h4>
+        <h4 className="text-xl font-serif text-ink mb-2">You're on the founding-builder list.</h4>
         <p className="text-ink-muted text-sm">
-          We'll be in touch as briefs come in that match what you build.
+          We'll walk you through the assessment, the badge categories, and the zero-commission early-builder terms before we open the platform.
         </p>
       </div>
     )
@@ -203,7 +203,7 @@ function BuilderForm({ iframeRef }) {
         type="submit"
         className="group inline-flex items-center gap-3 px-6 py-3 font-semibold text-sm uppercase tracking-wider transition-all duration-300 border border-forest text-forest hover:bg-forest hover:text-cream"
       >
-        Join as a builder
+        Register as a builder
         <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
           <path strokeLinecap="square" d="M5 12h14M12 5l7 7-7 7" />
         </svg>
@@ -256,7 +256,7 @@ export default function Contact() {
         <div className="flex items-center gap-3 mb-4">
           <div className="w-8 h-px bg-gradient-to-r from-forest to-forest-light" />
           <span className="text-xs text-forest tracking-widest uppercase font-medium">
-            Pick a side
+            Expressions of interest
           </span>
         </div>
 
@@ -265,20 +265,26 @@ export default function Contact() {
           <span className="italic text-forest">Same front door.</span>
         </h2>
 
-        <p className="text-ink-light text-lg max-w-xl mb-16 leading-relaxed">
-          We're running this experiment for a short window — early briefs and
-          early builders get the most attention. Either path takes about three
-          minutes.
+        <p className="text-ink-light text-lg max-w-2xl mb-6 leading-relaxed">
+          A heads up: we're not live yet. Keen is still being built, and we're
+          only taking expressions of interest at the moment — no money changes
+          hands, no briefs go out to a public board, nothing auto-matches.
+        </p>
+
+        <p className="text-ink-light text-base max-w-2xl mb-12 leading-relaxed">
+          What you're signing up to is the founding round — the first wave of
+          businesses and builders we'll hand-match ourselves before the
+          platform opens properly. Either form takes about three minutes.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="card-glow p-6 md:p-8">
             <div className="mb-6">
               <div className="w-2 h-2 rounded-full bg-forest mb-3" />
-              <h3 className="text-xl md:text-2xl font-serif text-ink mb-2">Post a brief</h3>
+              <h3 className="text-xl md:text-2xl font-serif text-ink mb-2">Register a brief</h3>
               <p className="text-sm text-ink-muted leading-relaxed">
-                You've got something that should be automated. Tell us what and
-                we'll find a builder who can ship it.
+                You've got something that should be automated. Tell us what,
+                and when we go live we'll match it to a vetted builder first.
               </p>
             </div>
             <BriefForm iframeRef={iframeRef} />
@@ -287,10 +293,11 @@ export default function Contact() {
           <div className="card-glow p-6 md:p-8">
             <div className="mb-6">
               <div className="w-2 h-2 rounded-full bg-forest-light mb-3" />
-              <h3 className="text-xl md:text-2xl font-serif text-ink mb-2">Join as a builder</h3>
+              <h3 className="text-xl md:text-2xl font-serif text-ink mb-2">Register as a builder</h3>
               <p className="text-sm text-ink-muted leading-relaxed">
-                You build AI automations and want paid Australian briefs in
-                your inbox. Tell us what you do.
+                You build AI automations and want founding-builder terms —
+                zero commission on your first three, early access to briefs,
+                a badge that stays.
               </p>
             </div>
             <BuilderForm iframeRef={iframeRef} />

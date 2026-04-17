@@ -43,13 +43,14 @@ export default function Hero() {
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-ink-muted" aria-label="Main navigation">
           <a href="#workflows" className="hover:text-forest transition-colors duration-300">What gets built</a>
+          <a href="#certification" className="hover:text-forest transition-colors duration-300">Vetted builders</a>
           <a href="#how-it-works" className="hover:text-forest transition-colors duration-300">How it works</a>
           <a href="#why-us" className="hover:text-forest transition-colors duration-300">For builders</a>
           <a
             href="#contact"
             className="magnetic-btn inline-block px-4 py-2 border border-forest/40 text-forest text-sm hover:bg-forest hover:text-cream hover:border-forest transition-all duration-300"
           >
-            Post a brief
+            Register interest
           </a>
         </nav>
       </header>
@@ -58,7 +59,7 @@ export default function Hero() {
         <div ref={badgeRef} className="mb-6 flex items-center gap-3">
           <div className="glow-dot" />
           <span className="text-xs text-forest tracking-widest uppercase font-medium">
-            An Australian marketplace for AI automation
+            Pre-launch · Now taking expressions of interest
           </span>
         </div>
 
@@ -75,17 +76,18 @@ export default function Hero() {
           ref={subRef}
           className="text-lg md:text-xl text-ink-light max-w-xl leading-relaxed mb-6"
         >
-          Keen is where Australian businesses meet the builders who can actually
-          ship the AI automation you've been meaning to get around to. No agency
-          quote. No six-month roadmap. No vendor trying to lock you into another
-          subscription you'll forget to cancel.
+          Keen is an Australian marketplace where small businesses meet vetted
+          AI automation builders — the ones who've actually shipped one of these
+          before. No agency quote, no six-month roadmap, no punting on whether
+          the person you hired knows what they're doing.
         </p>
 
         <p
           ref={uvpRef}
           className="text-sm text-ink-muted max-w-xl mb-10 tracking-wide"
         >
-          Post a brief, get matched with a builder, pay on delivery. That's it.
+          We're not live yet. Right now we're taking expressions of interest so
+          the first round of briefs and builders get hand-matched.
         </p>
 
         <div ref={ctaRef} className="flex items-center gap-6">
@@ -93,7 +95,7 @@ export default function Hero() {
             href="#contact"
             className="group inline-flex items-center gap-3 px-8 py-4 font-semibold text-sm uppercase tracking-wider transition-all duration-300 bg-forest text-cream hover:bg-forest-deep"
           >
-            Post a brief
+            Register a brief
             <svg
               className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
               fill="none"

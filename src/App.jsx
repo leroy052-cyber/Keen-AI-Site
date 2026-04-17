@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Hero from './components/Hero'
 import Audience from './components/Audience'
 import WhatWeBuild from './components/WhatWeBuild'
+import Certification from './components/Certification'
 import Services from './components/Services'
 import WhyUs from './components/WhyUs'
 import About from './components/About'
@@ -17,6 +18,7 @@ export default function App() {
       <main id="main-content">
         <Audience />
         <WhatWeBuild />
+        <Certification />
         <Services />
         <WhyUs />
         <About />
