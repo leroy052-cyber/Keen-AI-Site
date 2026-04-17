@@ -7,7 +7,7 @@ const BRIEF_ENTRY_IDS = {
   businessName: 'entry.119610129',
   email: 'entry.1114255288',
   details: 'entry.687457706',
-  links: 'entry.1760769960',
+  tools: 'entry.1760769960',
   budget: 'entry.230147062',
 }
 
@@ -36,7 +36,7 @@ function submitToGoogleForm(iframeRef, formUrl, entryIds, data) {
 }
 
 function BriefForm({ iframeRef }) {
-  const [data, setData] = useState({ businessName: '', email: '', details: '', links: '', budget: '' })
+  const [data, setData] = useState({ businessName: '', email: '', details: '', tools: '', budget: '' })
   const [submitted, setSubmitted] = useState(false)
 
   const onChange = (e) => setData((p) => ({ ...p, [e.target.name]: e.target.value }))
@@ -84,34 +84,29 @@ function BriefForm({ iframeRef }) {
         />
       </div>
       <div>
-        <label htmlFor="brief-links" className={labelClasses}>Links — we'd love to know who you are</label>
+        <label htmlFor="brief-tools" className={labelClasses}>Tools you already use</label>
         <input
-          id="brief-links"
-          name="links"
+          id="brief-tools"
+          name="tools"
           type="text"
-          value={data.links}
+          value={data.tools}
           onChange={onChange}
-          placeholder="Website, LinkedIn, anything that gives us context"
+          placeholder="e.g. Xero, HubSpot, Slack, Google Workspace"
           className={inputClasses}
         />
       </div>
       <div>
-        <label htmlFor="brief-budget" className={labelClasses}>Budget</label>
-        <select
+        <label htmlFor="brief-budget" className={labelClasses}>Rough budget</label>
+        <input
           id="brief-budget"
           name="budget"
+          type="text"
           required
           value={data.budget}
           onChange={onChange}
-          className={selectClasses}
-        >
-          <option value="" disabled>Select...</option>
-          <option>$0 - $1000</option>
-          <option>$1001 - $5000</option>
-          <option>$5001 - $10000</option>
-          <option>$10001 - $20000</option>
-          <option>$20000+</option>
-        </select>
+          placeholder="e.g. $500–$1,500, $4,000–$6,000, or a ballpark"
+          className={inputClasses}
+        />
       </div>
       <button
         type="submit"
