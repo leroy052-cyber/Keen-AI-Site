@@ -1,17 +1,23 @@
 import { useEffect, useRef, useState } from 'react'
 
 // --- Google Form Configuration ---
-// One form, two paths. The 'type' field distinguishes business briefs from
-// builder applications. Entry IDs are placeholders — swap for real ones when
-// the form is created.
-const GOOGLE_FORM_ACTION_URL = 'GOOGLE_FORM_URL_PLACEHOLDER'
-const ENTRY_IDS = {
-  type: 'entry.PLACEHOLDER_TYPE',
-  name: 'entry.PLACEHOLDER_NAME',
-  email: 'entry.PLACEHOLDER_EMAIL',
-  detail: 'entry.PLACEHOLDER_DETAIL',
-  stack: 'entry.PLACEHOLDER_STACK',
-  budget: 'entry.PLACEHOLDER_BUDGET',
+// Business brief form (live)
+const BRIEF_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScxVZeC6xttJ0SV-Wx6ta_MXA9mu6LkBHZx9Lgwym_p6l98gg/formResponse'
+const BRIEF_ENTRY_IDS = {
+  businessName: 'entry.119610129',
+  email: 'entry.1114255288',
+  details: 'entry.687457706',
+  links: 'entry.1760769960',
+  budget: 'entry.230147062',
+}
+
+// Builder form (live)
+const BUILDER_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeW_lKrYxyzIc5Xd_YuRm1fyM2LXP9QP_vOOQIUHV9CqXGMUw/formResponse'
+const BUILDER_ENTRY_IDS = {
+  name: 'entry.119610129',
+  email: 'entry.1114255288',
+  detail: 'entry.687457706',
+  links: 'entry.1760769960',
 }
 
 const inputClasses =
@@ -20,23 +26,23 @@ const selectClasses =
   'w-full px-4 py-3 bg-cream-warm border border-border text-ink text-sm focus:outline-none focus:border-forest transition-colors duration-200 appearance-none'
 const labelClasses = 'block text-xs font-medium text-ink-muted tracking-wide uppercase mb-2'
 
-function submitToForm(iframeRef, data) {
+function submitToGoogleForm(iframeRef, formUrl, entryIds, data) {
   const params = new URLSearchParams()
-  Object.keys(ENTRY_IDS).forEach((key) => {
-    if (data[key]) params.append(ENTRY_IDS[key], data[key])
+  Object.keys(entryIds).forEach((key) => {
+    if (data[key]) params.append(entryIds[key], data[key])
   })
-  const url = `${GOOGLE_FORM_ACTION_URL}?${params.toString()}`
+  const url = `${formUrl}?${params.toString()}`
   if (iframeRef?.current) iframeRef.current.src = url
 }
 
 function BriefForm({ iframeRef }) {
-  const [data, setData] = useState({ name: '', email: '', detail: '', stack: '', budget: '' })
+  const [data, setData] = useState({ businessName: '', email: '', details: '', links: '', budget: '' })
   const [submitted, setSubmitted] = useState(false)
 
   const onChange = (e) => setData((p) => ({ ...p, [e.target.name]: e.target.value }))
   const onSubmit = (e) => {
     e.preventDefault()
-    submitToForm(iframeRef, { ...data, type: 'brief' })
+    submitToGoogleForm(iframeRef, BRIEF_FORM_URL, BRIEF_ENTRY_IDS, data)
     setSubmitted(true)
   }
 
@@ -54,33 +60,43 @@ function BriefForm({ iframeRef }) {
 
   return (
     <form onSubmit={onSubmit} className="space-y-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="brief-businessName" className={labelClasses}>Business name</label>
+          <input id="brief-businessName" name="businessName" type="text" required value={data.businessName} onChange={onChange} className={inputClasses} />
+        </div>
+        <div>
+          <label htmlFor="brief-email" className={labelClasses}>Email</label>
+          <input id="brief-email" name="email" type="email" required value={data.email} onChange={onChange} className={inputClasses} />
+        </div>
+      </div>
       <div>
-        <label htmlFor="brief-detail" className={labelClasses}>What do you want automated?</label>
+        <label htmlFor="brief-details" className={labelClasses}>What do you need built?</label>
         <textarea
-          id="brief-detail"
-          name="detail"
+          id="brief-details"
+          name="details"
           required
           rows={3}
-          value={data.detail}
+          value={data.details}
           onChange={onChange}
           placeholder="e.g. A bot that answers customer questions from our help docs, or a weekly report that pulls from HubSpot and Stripe..."
           className={`${inputClasses} resize-none`}
         />
       </div>
       <div>
-        <label htmlFor="brief-stack" className={labelClasses}>Tools you already use</label>
+        <label htmlFor="brief-links" className={labelClasses}>Links — we'd love to know who you are</label>
         <input
-          id="brief-stack"
-          name="stack"
+          id="brief-links"
+          name="links"
           type="text"
-          value={data.stack}
+          value={data.links}
           onChange={onChange}
-          placeholder="e.g. Xero, HubSpot, Slack, Google Workspace"
+          placeholder="Website, LinkedIn, anything that gives us context"
           className={inputClasses}
         />
       </div>
       <div>
-        <label htmlFor="brief-budget" className={labelClasses}>Rough budget</label>
+        <label htmlFor="brief-budget" className={labelClasses}>Budget</label>
         <select
           id="brief-budget"
           name="budget"
@@ -90,23 +106,12 @@ function BriefForm({ iframeRef }) {
           className={selectClasses}
         >
           <option value="" disabled>Select...</option>
-          <option>Under $500</option>
-          <option>$500–$2,000</option>
-          <option>$2,000–$5,000</option>
-          <option>$5,000–$15,000</option>
-          <option>$15,000+</option>
-          <option>Not sure — want a quote</option>
+          <option>$0 - $1000</option>
+          <option>$1001 - $5000</option>
+          <option>$5001 - $10000</option>
+          <option>$10001 - $20000</option>
+          <option>$20000+</option>
         </select>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor="brief-name" className={labelClasses}>Name</label>
-          <input id="brief-name" name="name" type="text" required value={data.name} onChange={onChange} className={inputClasses} />
-        </div>
-        <div>
-          <label htmlFor="brief-email" className={labelClasses}>Email</label>
-          <input id="brief-email" name="email" type="email" required value={data.email} onChange={onChange} className={inputClasses} />
-        </div>
       </div>
       <button
         type="submit"
@@ -122,13 +127,13 @@ function BriefForm({ iframeRef }) {
 }
 
 function BuilderForm({ iframeRef }) {
-  const [data, setData] = useState({ name: '', email: '', detail: '', stack: '', budget: '' })
+  const [data, setData] = useState({ name: '', email: '', detail: '', links: '' })
   const [submitted, setSubmitted] = useState(false)
 
   const onChange = (e) => setData((p) => ({ ...p, [e.target.name]: e.target.value }))
   const onSubmit = (e) => {
     e.preventDefault()
-    submitToForm(iframeRef, { ...data, type: 'builder' })
+    submitToGoogleForm(iframeRef, BUILDER_FORM_URL, BUILDER_ENTRY_IDS, data)
     setSubmitted(true)
   }
 
@@ -146,8 +151,18 @@ function BuilderForm({ iframeRef }) {
 
   return (
     <form onSubmit={onSubmit} className="space-y-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="builder-name" className={labelClasses}>Name</label>
+          <input id="builder-name" name="name" type="text" required value={data.name} onChange={onChange} className={inputClasses} />
+        </div>
+        <div>
+          <label htmlFor="builder-email" className={labelClasses}>Email</label>
+          <input id="builder-email" name="email" type="email" required value={data.email} onChange={onChange} className={inputClasses} />
+        </div>
+      </div>
       <div>
-        <label htmlFor="builder-detail" className={labelClasses}>What do you build?</label>
+        <label htmlFor="builder-detail" className={labelClasses}>What do you build? What do you want to get out of this?</label>
         <textarea
           id="builder-detail"
           name="detail"
@@ -160,44 +175,16 @@ function BuilderForm({ iframeRef }) {
         />
       </div>
       <div>
-        <label htmlFor="builder-stack" className={labelClasses}>Links to work (optional)</label>
+        <label htmlFor="builder-links" className={labelClasses}>Links — we'd love to know who you are</label>
         <input
-          id="builder-stack"
-          name="stack"
+          id="builder-links"
+          name="links"
           type="text"
-          value={data.stack}
+          value={data.links}
           onChange={onChange}
           placeholder="GitHub, portfolio, LinkedIn, a case study you're proud of"
           className={inputClasses}
         />
-      </div>
-      <div>
-        <label htmlFor="builder-budget" className={labelClasses}>Typical project size</label>
-        <select
-          id="builder-budget"
-          name="budget"
-          required
-          value={data.budget}
-          onChange={onChange}
-          className={selectClasses}
-        >
-          <option value="" disabled>Select...</option>
-          <option>Quick fixes ($200–$1,000)</option>
-          <option>Single automations ($1,000–$5,000)</option>
-          <option>Multi-step builds ($5,000–$15,000)</option>
-          <option>Full systems ($15,000+)</option>
-          <option>Happy to take anything</option>
-        </select>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label htmlFor="builder-name" className={labelClasses}>Name</label>
-          <input id="builder-name" name="name" type="text" required value={data.name} onChange={onChange} className={inputClasses} />
-        </div>
-        <div>
-          <label htmlFor="builder-email" className={labelClasses}>Email</label>
-          <input id="builder-email" name="email" type="email" required value={data.email} onChange={onChange} className={inputClasses} />
-        </div>
       </div>
       <button
         type="submit"
