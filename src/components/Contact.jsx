@@ -16,8 +16,9 @@ const BUILDER_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeW_lKrYxyzIc
 const BUILDER_ENTRY_IDS = {
   name: 'entry.119610129',
   email: 'entry.1114255288',
-  detail: 'entry.687457706',
-  links: 'entry.1760769960',
+  linksToWork: 'entry.687457706',
+  projectSize: 'entry.1760769960',
+  whatYouBuild: 'entry.1160723858',
 }
 
 const inputClasses =
@@ -122,7 +123,7 @@ function BriefForm({ iframeRef }) {
 }
 
 function BuilderForm({ iframeRef }) {
-  const [data, setData] = useState({ name: '', email: '', detail: '', links: '' })
+  const [data, setData] = useState({ name: '', email: '', whatYouBuild: '', linksToWork: '', projectSize: '' })
   const [submitted, setSubmitted] = useState(false)
 
   const onChange = (e) => setData((p) => ({ ...p, [e.target.name]: e.target.value }))
@@ -157,29 +158,47 @@ function BuilderForm({ iframeRef }) {
         </div>
       </div>
       <div>
-        <label htmlFor="builder-detail" className={labelClasses}>What do you build? What do you want to get out of this?</label>
+        <label htmlFor="builder-whatYouBuild" className={labelClasses}>What do you build?</label>
         <textarea
-          id="builder-detail"
-          name="detail"
+          id="builder-whatYouBuild"
+          name="whatYouBuild"
           required
           rows={3}
-          value={data.detail}
+          value={data.whatYouBuild}
           onChange={onChange}
-          placeholder="e.g. I build agentic workflows in n8n, custom GPTs for support teams, scrapers that feed CRMs..."
+          placeholder="Anything from a career in coding and AI projects to just starting to learn vibe coding tools — we may be able to help with that!"
           className={`${inputClasses} resize-none`}
         />
       </div>
       <div>
-        <label htmlFor="builder-links" className={labelClasses}>Links — we'd love to know who you are</label>
-        <input
-          id="builder-links"
-          name="links"
-          type="text"
-          value={data.links}
+        <label htmlFor="builder-linksToWork" className={labelClasses}>Links to work</label>
+        <textarea
+          id="builder-linksToWork"
+          name="linksToWork"
+          rows={2}
+          value={data.linksToWork}
           onChange={onChange}
           placeholder="GitHub, portfolio, LinkedIn, a case study you're proud of"
-          className={inputClasses}
+          className={`${inputClasses} resize-none`}
         />
+      </div>
+      <div>
+        <label htmlFor="builder-projectSize" className={labelClasses}>Typical project size</label>
+        <select
+          id="builder-projectSize"
+          name="projectSize"
+          required
+          value={data.projectSize}
+          onChange={onChange}
+          className={selectClasses}
+        >
+          <option value="" disabled>Select...</option>
+          <option>Quick Fixes ($500-$1,000)</option>
+          <option>Single Automations ($1,000-$5,000)</option>
+          <option>Multi Step Builds ($5,000-$10,000)</option>
+          <option>Full Systems ($15,000+)</option>
+          <option>Happy to Take Anything!</option>
+        </select>
       </div>
       <button
         type="submit"
