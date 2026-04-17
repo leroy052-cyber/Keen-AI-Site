@@ -46,8 +46,19 @@ export default function About() {
               Zak Levy
             </h2>
 
+            {/* Photo */}
+            <div className="relative group mt-2 mb-8 overflow-hidden" style={{ borderTopRightRadius: '48px', aspectRatio: '3/4' }}>
+              <img
+                src="/zak.jpg"
+                alt="Zak Levy"
+                loading="lazy"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0a0a0a] to-transparent pointer-events-none" />
+            </div>
+
             {/* Decorative element */}
-            <div className="hidden md:flex flex-col gap-2 mt-8">
+            <div className="hidden md:flex flex-col gap-2">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-accent" />
                 <span className="text-xs text-muted">Builder</span>
@@ -58,7 +69,7 @@ export default function About() {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-emerald" />
-                <span className="text-xs text-muted">Content Creator</span>
+                <span className="text-xs text-muted">Ex-Tradie</span>
               </div>
             </div>
           </div>
@@ -72,24 +83,11 @@ export default function About() {
               Years of building things with my hands taught me something that carries over surprisingly well: you show up, you look at the problem, you figure out the right tool for the job, and you don't overcomplicate it. I started Keen AI because I kept meeting smart business owners burning hours on things that a well-placed bit of automation could handle before their morning coffee went cold — and nobody was helping them in a way that actually made sense.
             </p>
             <p className="text-muted-light leading-relaxed">
-              I also make content as{' '}
-              <span className="text-mint font-bold">Tech for Humans</span>{' '}
-              on TikTok, where I try to talk about AI and tech the way you'd explain it to a mate at the pub — because honestly, if you can't do that, you probably don't understand it as well as you think you do.
+              I like talking about AI and tech the way you'd explain it to a mate at the pub — because honestly, if you can't do that, you probably don't understand it as well as you think you do.
             </p>
 
             {/* Social links with coloured icons */}
             <div className="flex items-center gap-6 pt-4">
-              <a
-                href="https://www.tiktok.com/@techforhumans"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-sm text-muted-light hover:text-mint transition-colors duration-300"
-              >
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.18 8.18 0 004.77 1.52V6.84a4.84 4.84 0 01-1-.15z"/>
-                </svg>
-                TikTok
-              </a>
               <a
                 href="https://www.linkedin.com/in/zak-levy-63560a200/"
                 target="_blank"
