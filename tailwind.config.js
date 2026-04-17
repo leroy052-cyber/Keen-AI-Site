@@ -30,8 +30,8 @@ export default {
         'border-accent': '#2a3a00',
       },
       fontFamily: {
-        mono: ['"Space Mono"', 'monospace'],
-        display: ['"Space Mono"', 'monospace'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        display: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },
