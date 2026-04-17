@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="kGrad" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#BFFF00"/>
+      <stop offset="100%" stop-color="#00FFB2"/>
+    </linearGradient>
+    <clipPath id="kClip">
+      <text x="50" y="430" font-family="'Space Mono', monospace" font-weight="bold" font-size="420">k</text>
+    </clipPath>
+  </defs>
+  <path d="M0 0 H300 Q512 0 512 212 V512 H0 Z" fill="#0a0a0a"/>
+  <rect x="0" y="0" width="512" height="512" fill="url(#kGrad)" clip-path="url(#kClip)"/>
+</svg>
