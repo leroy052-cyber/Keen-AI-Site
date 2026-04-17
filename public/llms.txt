@@ -1,37 +1,63 @@
 # Keen AI
 
-> Australian AI workflow automation for allied health clinics — physiotherapy,
-> psychology, occupational therapy, speech pathology, and podiatry. Founded by
-> Zak Levy. Based in Australia.
+> An Australian marketplace connecting small and medium businesses with
+> vetted AI automation builders. Pre-launch — currently taking expressions
+> of interest. Founded by Zak Levy.
 
 ## About
 
-Keen AI builds custom AI workflows for Australian allied health clinics. We
-handle documentation assist, patient recall automation, and intake flows —
-integrating with your existing practice management software (Cliniko, Halaxy,
-Nookal, Power Diary) and handing you the keys when we're done.
+Keen AI is a small, Australian-first marketplace where businesses post AI
+automation briefs and vetted builders pick them up. It is also a training
+network: the builders on Keen are certified through a technical assessment
+and category badges tied to real shipped work, and the marketplace itself
+is how they keep levelling up.
 
-Our approach: discovery audit, build in two to three weeks, deploy and hand
-over. No ongoing subscription, no vendor lock-in. You own everything we build.
+Keen is currently pre-launch. At the moment the site is only gathering
+expressions of interest on both sides so the founding round of briefs and
+builders can be hand-matched before the platform opens publicly.
 
 - **Website:** https://keenai.com.au
 - **Email:** zak@keenai.com.au
 - **Location:** Australia
 - **Founded by:** Zak Levy
-- **Specialties:** Clinical Documentation Automation, Patient Recall Automation, Intake Flow Automation, Healthcare Workflow AI
-- **Target clients:** Allied health clinic owners (physio, psychology, OT, speech pathology, podiatry), 2–10 practitioners
+- **Status:** Pre-launch, taking expressions of interest
+- **Positioning:** Marketplace for AI automation + builder training/certification
 
-## Services
+## Who it is for
 
-- [Discovery Audit](https://keenai.com.au/#how-it-works): Focused workflow audit mapping your clinic's documentation, recall, intake, and billing processes to identify the highest-value automations.
-- [Custom AI Workflow Build](https://keenai.com.au/#how-it-works): Two-to-three week build of custom AI workflows shaped around your PMS, clinical protocols, and practice operations.
-- [Deploy & Handover](https://keenai.com.au/#how-it-works): Deployment into your live environment, team training, and full handover with two weeks of post-launch support.
+- **Businesses:** Australian SMEs with things they would like to automate —
+  chatbots, internal tooling, report generation, CRM hygiene, integrations,
+  agents, back-office workflows, inbox triage, custom GPTs, and so on.
+- **Builders:** People who build AI automations with tools like n8n, Zapier,
+  custom GPTs, agentic frameworks, or bespoke code, and who want paid
+  Australian work plus a network to keep learning in.
 
-## What We Build
+## How it works
 
-- **Documentation assist** — AI-drafted SOAP notes and progress reports from session audio, reviewed and signed off by the clinician.
-- **Recall automation** — Automated patient recall sequences triggered by treatment plans, integrated with your PMS.
-- **Intake flow** — End-to-end new patient intake from online forms through to appointment booking and Medicare eligibility checks.
+1. **A brief gets posted** — a business describes what they want automated,
+   the tools they already use, and their rough budget. Every brief has a
+   budget attached before any builder sees it.
+2. **A builder picks it up** — vetted builders propose a plan and a quote.
+   Scope and price are agreed before any work starts.
+3. **The thing gets built** — the builder ships, the business signs off,
+   and payment is released. The business keeps the automation, the docs,
+   and the credentials.
+
+## Certification and training
+
+- Every builder passes a technical assessment before taking paid briefs.
+- Profiles carry category badges (n8n, agentic systems, custom GPTs,
+  integrations, scrapers, etc.) tied to real delivered work.
+- First builds are reviewed by senior builders in the network.
+- Monthly training sessions cover frameworks and playbooks that are
+  currently getting paid for, not last year's tutorials.
+
+## Founding-builder terms
+
+- First three paid builds are commission-free.
+- Founding-builder badge stays on the profile.
+- First look at new briefs in chosen categories.
+- AUD payment, Australian timezone, no unpaid RFPs.
 
 ## Contact
 
@@ -40,8 +66,8 @@ over. No ongoing subscription, no vendor lock-in. You own everything we build.
 - LinkedIn: https://www.linkedin.com/in/zak-levy-63560a200
 - GitHub: https://github.com/leroy052-cyber
 
-## Important Note
+## Important note
 
-Keen AI (keenai.com.au) is an Australian AI consulting business and is a
-separate entity from Keen AI Ltd (keen-ai.com), a UK-based company focused on
-infrastructure and utilities AI. We are not affiliated.
+Keen AI (keenai.com.au) is an Australian marketplace for AI automation and is
+a separate entity from Keen AI Ltd (keen-ai.com), a UK-based company focused
+on infrastructure and utilities AI. We are not affiliated.
