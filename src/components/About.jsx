@@ -38,7 +38,7 @@ export default function About() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-px bg-gradient-to-r from-forest to-forest-light" />
               <span className="text-xs text-forest tracking-widest uppercase font-medium">
-                The human behind it
+                The human running the experiment
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-6 text-ink">
@@ -48,11 +48,11 @@ export default function About() {
             <div className="hidden md:flex flex-col gap-2 mt-8">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-forest" />
-                <span className="text-xs text-ink-muted">Allied Health Automation</span>
+                <span className="text-xs text-ink-muted">AI Automation</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-forest-light" />
-                <span className="text-xs text-ink-muted">AI Workflows</span>
+                <span className="text-xs text-ink-muted">Marketplace Experiments</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-forest-deep" />
@@ -64,15 +64,18 @@ export default function About() {
           {/* Right column */}
           <div ref={contentRef} className="space-y-6">
             <p className="text-lg md:text-xl text-ink leading-relaxed">
-              I used to be a tradesperson, which is a strange thing to lead with on an AI consulting website, but it's actually the most relevant thing about me.
+              I used to be a tradesperson, which is a strange thing to lead with on a tech website, but it tends to explain most of the rest.
             </p>
             <p className="text-ink-light leading-relaxed">
-              Years of building things with my hands taught me something that carries over surprisingly well: you show up, you look at the problem, you figure out the right tool for the job, and you don't overcomplicate it. These days I spend most of my time inside allied health clinics — physio, psychology, OT, speech pathology — building the automations that let practitioners go home on time.
+              I've spent the last couple of years helping small businesses actually ship AI automations — inside clinics, agencies, tradie businesses, logistics outfits, anyone with a list of things they wanted automated but not quite the budget for a consultancy to get through procurement. Same pattern, over and over. The business knew what they wanted. A builder existed somewhere who could do it in a week. Getting them into the same room was harder than the build itself.
             </p>
             <p className="text-ink-light leading-relaxed">
-              I also make content as{' '}
+              Keen is the experiment. A small, Australian-first marketplace for the kind of AI automation work that's genuinely happening right now — not the enterprise stuff, not the unpaid freelancer platforms, the real paid work in between. If it works, we keep building it. If it doesn't, we'll have learned something worth knowing.
+            </p>
+            <p className="text-ink-light leading-relaxed">
+              In the meantime I still make content as{' '}
               <span className="text-forest font-semibold">Tech for Humans</span>{' '}
-              on TikTok, where I try to talk about AI and tech the way you'd explain it to a mate at the pub — because honestly, if you can't do that, you probably don't understand it as well as you think you do.
+              on TikTok, where I try to talk about AI the way you'd explain it to a mate at the pub — because if you can't do that, you probably don't understand it as well as you think you do.
             </p>
 
             <div className="flex items-center gap-6 pt-4">

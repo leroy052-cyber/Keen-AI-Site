@@ -3,23 +3,23 @@ import { useEffect, useRef } from 'react'
 const workflows = [
   {
     number: '01',
-    title: 'Documentation assist',
+    title: 'Customer-facing',
     description:
-      "AI-assisted clinical notes that draft your SOAP entries, progress notes, and discharge summaries from session audio or structured prompts. You review, edit, sign off — but the first draft is done before you stand up from the chair.",
+      "Chatbots that actually know your business, booking flows that don't make people rage-quit, FAQ agents trained on your own docs, lead capture that sorts itself into the right bucket, reply drafters that sound like you and not like ChatGPT. The front-end work that makes a small business feel bigger than it is.",
     color: '#2D5A3D',
   },
   {
     number: '02',
-    title: 'Recall automation',
+    title: 'Back-office',
     description:
-      "Automated patient recall that identifies who's overdue, sends the right message at the right time, and rebooks without your front desk lifting a finger. Integrates with Cliniko, Halaxy, Nookal, or Power Diary.",
+      "Report generation, invoice chasing, inbox triage, CRM hygiene, meeting recordings turned into tasks, PDFs turned into spreadsheets, weekly summaries that write themselves. The stuff that eats your week if you let it, and quietly compounds into burnout if you let it go on long enough.",
     color: '#3A7A52',
   },
   {
     number: '03',
-    title: 'Intake flow',
+    title: 'Integrations & agents',
     description:
-      "End-to-end new patient intake — from online forms and consent collection through to appointment booking and Medicare eligibility checks. The patient gets a smooth experience; your admin gets their afternoon back.",
+      "Stitching together the eight apps you already pay for so they actually talk to each other. Custom agents that handle the multi-step thing you keep re-explaining to every new hire. The plumbing that sits underneath everything else and makes the rest of it work properly.",
     color: '#1E3D2A',
   },
 ]
@@ -60,12 +60,12 @@ export default function WhatWeBuild() {
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-px bg-gradient-to-r from-forest to-forest-light" />
             <span className="text-xs text-forest tracking-widest uppercase font-medium">
-              What we build
+              What gets built on Keen
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-serif tracking-tight leading-tight text-ink">
-            Three workflows that change<br />
-            <span className="italic text-forest">how your clinic runs.</span>
+            If a human is doing it more than once,<br />
+            <span className="italic text-forest">someone here can probably automate it.</span>
           </h2>
         </div>
 

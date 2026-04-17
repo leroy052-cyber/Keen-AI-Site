@@ -2,21 +2,21 @@ import { useEffect, useRef } from 'react'
 
 const differentiators = [
   {
-    label: 'Broader than scribing',
+    label: 'Paid briefs only',
     description:
-      "Heidi and Lyrebird are excellent at what they do — in-consult transcription. But scribing is one piece of the puzzle. We automate the whole workflow: documentation, recall, intake, billing. One engagement, not five subscriptions.",
+      "Every brief on Keen has a budget attached before you see it. If someone wants a free plan written up so they can take it to their nephew, they can go back to LinkedIn. Builders here get paid for scope, not for pitching into a black hole.",
     color: '#2D5A3D',
   },
   {
-    label: 'Priced for clinics, not hospitals',
+    label: 'Australian-first, AUD-only',
     description:
-      "Enterprise consultancies charge enterprise rates for a 12-week discovery phase. We ship working automation in two to three weeks, priced for a clinic with four practitioners, not a hospital group with a procurement department.",
+      "The businesses posting here are Australian, the timezones are aligned, and the money moves in AUD. You know who you're talking to and when they're awake. No 2am Slack messages from a timezone you never agreed to work across.",
     color: '#3A7A52',
   },
   {
-    label: 'Always on, always consistent',
+    label: 'Zero commission on your first three',
     description:
-      "A virtual assistant goes home. These workflows run around the clock — recalling patients at 7am, processing intake forms at midnight, drafting notes while you see the next patient. Zero marginal cost, zero sick days.",
+      "We're still building this thing. Early builders get the first three jobs commission-free, a founding-builder badge that stays on your profile, and first look at new briefs in your categories. Fair trade for putting up with our bug reports.",
     color: '#1E3D2A',
   },
 ]
@@ -57,12 +57,12 @@ export default function WhyUs() {
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-px bg-gradient-to-r from-forest to-forest-light" />
             <span className="text-xs text-forest tracking-widest uppercase font-medium">
-              Why us
+              For builders
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-serif tracking-tight leading-tight text-ink">
-            Not the only option.<br />
-            <span className="italic text-forest">Just the right-shaped one.</span>
+            Freelancer platforms weren't built for<br />
+            <span className="italic text-forest">the kind of work you do.</span>
           </h2>
         </div>
 

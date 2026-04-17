@@ -2,18 +2,18 @@ import { useEffect, useRef } from 'react'
 
 const painPoints = [
   {
-    label: 'Clinical documentation',
-    text: "You finished your last patient at 5:30 and you're still writing SOAP notes at 8pm. Progress notes, treatment summaries, discharge letters — the clinical work expands to fill every evening you were hoping to spend somewhere else.",
+    label: 'The spreadsheet that shouldn\'t be one',
+    text: "Someone on your team spends three hours every Friday moving numbers from one tab to another. Everyone agrees it should be automated. Nobody has the afternoon spare to work out how — and so it keeps happening, week after week, Friday after Friday.",
     accent: '#2D5A3D',
   },
   {
-    label: 'Patient recall & retention',
-    text: "Patients drop off after three sessions and nobody notices until the revenue dip shows up months later. Your PMS has a recall feature somewhere in a menu you've never opened, and the patients who need rebooking are quietly disappearing.",
+    label: 'The demo that never made it past demo',
+    text: "You watched the YouTube video. You tried it yourself. Got halfway through setting it up, then something broke at a step the tutorial skipped, and now there's a half-built Zap sitting in your account that nobody quite knows what to do with.",
     accent: '#3A7A52',
   },
   {
-    label: 'Intake & admin overhead',
-    text: "New patient paperwork, Medicare claims, invoice chasing, referral letters — your front desk is spending half their day on tasks that feel like they should just happen automatically. Cliniko or Halaxy handles some of it, but the gaps between tools are where the hours go.",
+    label: 'The quote that made you put it in the drawer',
+    text: "An agency quoted twenty grand and a twelve-week roadmap to automate one email workflow. It's been sitting in the bottom drawer ever since, getting slightly more embarrassing every time you come across it while looking for a stapler.",
     accent: '#1E3D2A',
   },
 ]
@@ -54,12 +54,12 @@ export default function Audience() {
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-px bg-gradient-to-r from-forest to-forest-light" />
             <span className="text-xs text-forest tracking-widest uppercase font-medium">
-              Sound familiar?
+              If this sounds familiar
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-serif tracking-tight leading-tight text-ink">
-            The work you trained for keeps getting<br />
-            <span className="italic text-forest">buried under the work you didn't.</span>
+            You've got a list of things you'd automate —<br />
+            <span className="italic text-forest">if only you had the time to figure it out.</span>
           </h2>
         </div>
 

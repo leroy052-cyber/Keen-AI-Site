@@ -3,23 +3,29 @@ import { useEffect, useRef } from 'react'
 const steps = [
   {
     number: '01',
-    title: 'Discovery Audit',
-    description:
-      "We spend a focused session mapping your clinic's workflows — documentation, recall, intake, billing — and identify the two or three automations that will actually move the needle. No 40-page report. A clear list of what to build first and why.",
+    title: 'A brief gets posted',
+    business:
+      "You write down what you want automated, what tools you're already using, and roughly what you'd pay if someone made it work. Takes about five minutes. No login wall, no quote form that takes two business days.",
+    builder:
+      "Briefs land in your feed, filtered by the stack you work in — n8n, Zapier, custom GPTs, agentic frameworks, whatever. Every brief on Keen has a budget attached before you see it.",
     color: '#2D5A3D',
   },
   {
     number: '02',
-    title: 'Build',
-    description:
-      "Over two to three weeks, we build your custom workflows. These aren't generic templates — they're shaped around your PMS, your clinical protocols, and the specific way your practice runs. You see progress throughout, not a big reveal at the end.",
+    title: 'A builder picks it up',
+    business:
+      "A handful of builders put their hand up with a plan and a price. You read the plans, pick the one whose approach you actually understand. We verify who they are so you're not just taking a punt on a username.",
+    builder:
+      "You bid with a short plan and a fixed quote. Scope is agreed before anyone opens a code editor. No unpaid discovery calls, no spec-written-for-free.",
     color: '#3A7A52',
   },
   {
     number: '03',
-    title: 'Deploy & Handover',
-    description:
-      "We deploy into your live environment, train your team, and hand you the keys. These workflows are yours — no ongoing subscription to us, no vendor lock-in. We stick around for two weeks post-launch to make sure everything beds in properly.",
+    title: 'The thing gets built',
+    business:
+      "They build it. You see progress as it goes, not a big reveal at the end. When it works, you sign off and we release the payment. You keep the automation, the docs, the credentials — the lot.",
+    builder:
+      "Ship the build, get signed off, get paid in AUD. We hold payment in escrow so you're not chasing an invoice three weeks later. First three builds are commission-free.",
     color: '#1E3D2A',
   },
 ]
@@ -64,8 +70,8 @@ export default function Services() {
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-serif tracking-tight leading-tight text-ink">
-            Discovery to deployment<br />
-            <span className="italic text-forest">in weeks, not months.</span>
+            A brief gets posted. A builder picks it up.<br />
+            <span className="italic text-forest">The thing gets built.</span>
           </h2>
         </div>
 
@@ -74,7 +80,7 @@ export default function Services() {
             <div
               key={step.number}
               ref={(el) => (itemRefs.current[i] = el)}
-              className="group grid grid-cols-1 md:grid-cols-[80px_1fr_1.5fr] gap-4 md:gap-8 py-10 border-t border-border hover:bg-cream-warm/50 transition-all duration-500 px-4 -mx-4"
+              className="group grid grid-cols-1 md:grid-cols-[80px_1fr] gap-4 md:gap-8 py-12 border-t border-border hover:bg-cream-warm/50 transition-all duration-500 px-4 -mx-4"
             >
               <span
                 className="text-sm font-semibold"
@@ -82,15 +88,37 @@ export default function Services() {
               >
                 {step.number}
               </span>
-              <h3 className="text-xl md:text-2xl font-serif transition-colors duration-300 group-hover:text-forest text-ink">
-                {step.title}
-              </h3>
               <div>
-                <p className="text-ink-light leading-relaxed text-sm md:text-base">
-                  {step.description}
-                </p>
+                <h3 className="text-xl md:text-2xl font-serif transition-colors duration-300 group-hover:text-forest text-ink mb-6">
+                  {step.title}
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+                  <div>
+                    <span
+                      className="text-[10px] tracking-widest uppercase font-semibold block mb-2"
+                      style={{ color: step.color }}
+                    >
+                      If you've got something to automate
+                    </span>
+                    <p className="text-ink-light leading-relaxed text-sm md:text-base">
+                      {step.business}
+                    </p>
+                  </div>
+                  <div>
+                    <span
+                      className="text-[10px] tracking-widest uppercase font-semibold block mb-2 text-ink-muted"
+                    >
+                      If you're a builder
+                    </span>
+                    <p className="text-ink-light leading-relaxed text-sm md:text-base">
+                      {step.builder}
+                    </p>
+                  </div>
+                </div>
+
                 <div
-                  className="mt-4 h-[2px] w-0 group-hover:w-16 transition-all duration-500"
+                  className="mt-6 h-[2px] w-0 group-hover:w-16 transition-all duration-500"
                   style={{ background: `linear-gradient(90deg, ${step.color}, transparent)` }}
                 />
               </div>
