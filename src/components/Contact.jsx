@@ -134,10 +134,56 @@ export default function Contact() {
           <span className="text-gradient">eating your time.</span>
         </h2>
 
-        <p className="text-muted-light text-lg max-w-xl mb-16 leading-relaxed">
+        <p className="text-muted-light text-lg max-w-xl mb-12 leading-relaxed">
           No sales pitch. No jargon. Just a proper chat about whether AI can
           actually help — or whether you just need a better spreadsheet.
         </p>
+
+        {/* Direct contact CTA */}
+        <div className="card-glow p-6 md:p-8 mb-16">
+          <p className="text-sm text-accent tracking-widest uppercase mb-5">
+            Skip the form — reach out directly
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6">
+            <a
+              href="tel:+610435003014"
+              className="group flex items-center gap-3 text-lg font-bold text-muted-light hover:text-mint transition-colors duration-300"
+            >
+              <svg
+                className="w-5 h-5 text-mint/60 group-hover:text-mint transition-colors duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              0435 003 014
+            </a>
+            <a
+              href="mailto:zak@keenai.com.au"
+              className="group flex items-center gap-3 text-lg font-bold text-muted-light hover:text-accent transition-colors duration-300"
+            >
+              <svg
+                className="w-5 h-5 text-accent/60 group-hover:text-accent transition-colors duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              zak@keenai.com.au
+            </a>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 mb-16">
+          <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, transparent, #1a1a1a 50%)' }} />
+          <span className="text-xs text-muted tracking-widest uppercase">or drop us a message</span>
+          <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, #1a1a1a 50%, transparent)' }} />
+        </div>
 
         {/* Form / Success */}
         {status === 'success' ? (
@@ -294,34 +340,6 @@ export default function Contact() {
               </svg>
             </button>
           </form>
-        )}
-
-        {/* Email fallback */}
-        {status !== 'success' && (
-          <>
-            <div
-              className="w-full h-px mb-8"
-              style={{ background: 'linear-gradient(90deg, transparent, #1a1a1a 20%, #1a1a1a 80%, transparent)' }}
-            />
-            <p className="text-muted text-sm mb-3">
-              Prefer email? Old school. Respect.
-            </p>
-            <a
-              href="mailto:zak@keenai.com.au"
-              className="group inline-flex items-center gap-3 text-lg font-bold text-muted-light hover:text-accent transition-colors duration-300 mb-20"
-            >
-              zak@keenai.com.au
-              <svg
-                className="w-4 h-4 text-muted group-hover:text-mint group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path strokeLinecap="square" d="M7 17L17 7M17 7H7M17 7v10" />
-              </svg>
-            </a>
-          </>
         )}
 
         {/* Divider before footer */}
