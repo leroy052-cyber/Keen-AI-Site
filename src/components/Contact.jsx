@@ -54,24 +54,23 @@ export default function Contact() {
     setErrors({})
     setStatus('submitting')
 
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          company: form.company,
-          message: form.message,
-        }),
-      })
+    const GOOGLE_FORM_URL =
+      'https://docs.google.com/forms/d/e/1FAIpQLScudKN_KhnlN5jjnlpXEsqH7sdmdyAVn9TM2zZbXDT5XQT2GQ/formResponse'
 
-      if (res.ok) {
-        setStatus('success')
-      } else {
-        setStatus('error')
-      }
+    const formData = new FormData()
+    formData.append('entry.1894472148', form.name)
+    formData.append('entry.1572245191', form.email)
+    formData.append('entry.689269064', form.phone)
+    formData.append('entry.778396943', form.company)
+    formData.append('entry.855657908', form.message)
+
+    try {
+      await fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData,
+      })
+      setStatus('success')
     } catch {
       setStatus('error')
     }
